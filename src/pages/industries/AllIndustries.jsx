@@ -1,0 +1,17 @@
+import React from 'react'
+import StatsSection from '../../components/common/StatsSection'
+import SoftwareProvide from '../../components/common/SoftwareProvide'
+import IconTopCard from '../../components/common/IconTopCard'
+const AllIndustries = () => {
+  return (
+    <>
+     <StatsSection/>
+    <SoftwareProvide/>
+    <IconTopCard/>
+    
+    
+    </>
+  )
+}
+
+export default AllIndustries
