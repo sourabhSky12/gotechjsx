@@ -67,7 +67,8 @@ function App() {
           />
           <Route path="/industries/allindustries" element={<AllIndustries />} />
 
-          <Route path="/techstack" element={<Techstack />} />
+          <Route path="/tech-stack" element={<Techstack />} />
+
           <Route path="/techstack/java" element={<Java />} />
           <Route path="/techstack/net" element={<Net />} />
           <Route path="/techstack/node" element={<Node />} />

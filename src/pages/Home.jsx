@@ -1,8 +1,13 @@
 import React from 'react'
 import CallToAction from '../components/common/CallToAction'
 import BluePart from '../components/common/BluePart'
-
+const handleCTA = () => {
+  // Navigate, scroll, or open modal
+  console.log("CTA clicked");
+};
 const Home = () => {
+ 
+
   return (
     <>
     {/* Starting Part */}
@@ -60,7 +65,12 @@ const Home = () => {
 
 {/* Call to action part */}
 
-<CallToAction/>
+<CallToAction
+title="READY TO START YOUR DIGITAL TRANSFORMATION JOURNEY?"
+    subtitle="With our innovative and industry-proven services, we’ll help you unlock new growth opportunities."
+    buttonText="GET INFO"
+    onClick={handleCTA}
+/>
 <BluePart/>
 
     </>
