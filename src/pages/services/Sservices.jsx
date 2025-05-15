@@ -3,7 +3,7 @@ import StatsSection from '../../components/common/StatsSection'
 import IconTopCard from '../../components/common/IconTopCard'
 import GridBlueCard from '../../components/common/GridBlueCard'
 
-const Services = () => {
+const Sservices = () => {
   return (
     <>
     <StatsSection/>
@@ -13,4 +13,4 @@ const Services = () => {
   )
 }
 
-export default Services
+export default Sservices

@@ -8,12 +8,13 @@ import GridBlueCard from '../../../components/common/GridBlueCard'
 const Fintech = () => {
   return (
     <>
+    <div>
     <StatsSection/>
     <IconTopCard/>
     <CallToAction/>
     <BoxBaseBord/>
     <GridBlueCard/>
-    
+    </div>
     
     </>
   )

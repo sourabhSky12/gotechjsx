@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <>
     {/* Starting Part */}
-    <div className="flex flex-col lg:flex-row mt-12 pl-4 w-full lg:px-40 overflow-hidden  ">
+
+<div className="flex flex-col lg:flex-row mt-12 pl-4 w-full lg:px-40 overflow-hidden  ">
   {/* Text + Button + Stats */}
   <div className="flex-1 flex flex-col  ">
     <div className="mb-6 pl-10 lg:pl-0">
@@ -61,8 +62,6 @@ const Home = () => {
 
 <CallToAction/>
 <BluePart/>
-
-
 
     </>
   )
