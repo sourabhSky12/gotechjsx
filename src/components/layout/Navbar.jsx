@@ -1,56 +1,263 @@
 import React, {useState} from "react";
 
-const servicesSubmenu = [
-    "Custom Software Development",
-    "Startup MVP Development",
-    "Web Development",
-    "Mobile App Development",
-    "Android App Development",
-    "Cross-Platform App Development",
-    "Intelligent Automation",
-    "Digital Marketing Services",
-    "Search Engine Optimization",
-    "PPC",
-    "SMO/SMM",
-    "AI & ML Development",
-    "Managed IT Services",
-    "Cloud & DevOps Services",
-    "Staff Augmentation",
-    "IT Consulting",
-    "Discovery Phase"
-];
+const servicesSubmenu = [{
+    label: "Custom Software Development",
+    submenu: [
+        {
+            label: "Startup MVP Development",
+            path: "/startup-mvp-development"
+        },
+        {
+            label: "Web Development",
+            path: "/web-development"
+        },
+        {
+            label: "Mobile App Development",
+            path: "/mobile-app-development"
+        },
+        {
+            label: "Android App Development",
+            path: "/android-app-development"
+        },
+        {
+            label: "Cross-Platform App Development",
+            path: "/cross-platform-app-development"
+        },
+        {
+            label: "Intelligent Automation",
+            path: "/intelligent-automation"
+        },
+        {
+            label: "Digital Marketing Services",
+            path: "/digital-marketing-services"
+        },
+        {
+            label: "Search Engine Optimization",
+            path: "/search-engine-optimization"
+        },
+        {
+            label: "PPC",
+            path: "/ppc"
+        },
+        {
+            label: "SMO/SMM",
+            path: "/smo-smm"
+        },
+        {
+            label: "AI & ML Development",
+            path: "/ai-ml-development"
+        },
+    ]}
+    ,{
+        label: "Managed IT Services",
+        path: "/managed-it-services",
+        submenu: [
+            {
+                label: "Staff Augmentation",
+                path: "/staff-augmentation"
+            },
+            
+        ]
+    },
+    {
+        label: "Cloud & DevOps Services",
+        path: "/cloud-devops-services"
+    }
+    ];
 
-const industriesSubmenu = [
-    "Fintech",
-    "Healthcare",
-    "Media & Entertainment",
-    "Automotive",
-    "E-Commerce"
-];
+const industriesSubmenu = [{
+    label: "Fintech",
+    path: "/industries/fintech",
+    submenu: [
+        {
+            label: "Banking Solutions",
+            path: "/industries/fintech/banking"
+        },
+        {
+            label: "Payment Processing",
+            path: "/industries/fintech/payments"
+        },
+        {
+            label: "Digital Wallets",
+            path: "/industries/fintech/digital-wallets"
+        }
+    ]
+}, {
+    label: "Healthcare",
+    path: "/industries/healthcare",
+    submenu: [
+        {
+            label: "Telemedicine",
+            path: "/industries/healthcare/telemedicine"
+        },
+        {
+            label: "Hospital Management",
+            path: "/industries/healthcare/hospital-management"
+        },
+        {
+            label: "Patient Care",
+            path: "/industries/healthcare/patient-care"
+        }
+    ]
+}, {
+    label: "Media & Entertainment",
+    path: "/industries/media-entertainment",
+    submenu: [
+        {
+            label: "Streaming Platforms",
+            path: "/industries/media-entertainment/streaming"
+        },
+        {
+            label: "Content Management",
+            path: "/industries/media-entertainment/content"
+        }
+    ]
+}, {
+    label: "Automotive",
+    path: "/industries/automotive",
+    submenu: [
+        {
+            label: "Connected Cars",
+            path: "/industries/automotive/connected-cars"
+        },
+        {
+            label: "Fleet Management",
+            path: "/industries/automotive/fleet-management"
+        }
+    ]
+}, {
+    label: "E-Commerce",
+    path: "/industries/e-commerce",
+    submenu: [
+        {
+            label: "Online Retail",
+            path: "/industries/e-commerce/retail"
+        },
+        {
+            label: "Marketplace Solutions",
+            path: "/industries/e-commerce/marketplace"
+        }
+    ]
+}];
 
-const techstackSubmenu = [
-    "front-end",
-    "Angular",
-    "React",
-    "back-end",
-    "Node",
-    "PHP",
-    ".NET",
-    "Java",
-    "Python",
-    "Mobile",
-    "IOS",
-    "Anderoid",
-    "React Native",
-    "Flutter"
-];
+const techstackSubmenu = [{
+    label: "Front-end",
+    path: "/tech-stack/front-end",
+    submenu: [
+        {
+            label: "Angular",
+            path: "/tech-stack/front-end/angular"
+        },
+        {
+            label: "React",
+            path: "/tech-stack/front-end/react"
+        }
+    ]
+}, {
+    label: "Back-end",
+    path: "/tech-stack/back-end",
+    submenu: [
+        {
+            label: "Node",
+            path: "/tech-stack/back-end/node"
+        },
+        {
+            label: "PHP",
+            path: "/tech-stack/back-end/php"
+        },
+        {
+            label: ".NET",
+            path: "/tech-stack/back-end/dotnet"
+        },
+        {
+            label: "Java",
+            path: "/tech-stack/back-end/java"
+        },
+        {
+            label: "Python",
+            path: "/tech-stack/back-end/python"
+        }
+    ]
+}, {
+    label: "Mobile",
+    path: "/tech-stack/mobile",
+    submenu: [
+        {
+            label: "iOS",
+            path: "/tech-stack/mobile/ios"
+        },
+        {
+            label: "Android",
+            path: "/tech-stack/mobile/android"
+        },
+        {
+            label: "React Native",
+            path: "/tech-stack/mobile/react-native"
+        },
+        {
+            label: "Flutter",
+            path: "/tech-stack/mobile/flutter"
+        }
+    ]
+}];
 
-const companySubmenu = [
-    "Referral Program",
-    "Blogs",
-    "Contact",
-    "about us"
-];
+const companySubmenu = [{
+    label: "Referral Program",
+    path: "/company/referral-program",
+    submenu: [
+        {
+            label: "Partner With Us",
+            path: "/company/referral-program/partner"
+        },
+        {
+            label: "Benefits",
+            path: "/company/referral-program/benefits"
+        }
+    ]
+}, {
+    label: "Blogs",
+    path: "/company/blogs",
+    submenu: [
+        {
+            label: "Technical Insights",
+            path: "/company/blogs/technical-insights"
+        },
+        {
+            label: "Industry News",
+            path: "/company/blogs/industry-news"
+        }
+    ]
+}, {
+    label: "Contact",
+    path: "/company/contact",
+    submenu: [
+        {
+            label: "Get in Touch",
+            path: "/company/contact/get-in-touch"
+        },
+        {
+            label: "Support",
+            path: "/company/contact/support"
+        }
+    ]
+}, {
+    label: "About Us",
+    path: "/company/about",
+    submenu: [
+        {
+            label: "Our Story",
+            path: "/company/about/our-story"
+        },
+        {
+            label: "Team",
+            path: "/company/about/team"
+        },
+        {
+            label: "Careers",
+            path: "/company/about/careers"
+        }
+    ]
+}];
 
 const SerInfo = () => {
     return (
@@ -129,11 +336,11 @@ const ProInfo = () => {
 }
 
 const navItems = [
-    { label: "SERVICES", path: "/services", submenu: servicesSubmenu , subInfo: <SerInfo/>},
-    { label: "INDUSTRIES", path: "/industries" , submenu: industriesSubmenu, subInfo: <IndInfo/>},
-    { label: "TECH STACK", path: "/tech-stack" , submenu: techstackSubmenu, subInfo: <TecInfo/>},
-    { label: "COMPANY", path: "/company" , submenu: companySubmenu, subInfo: <ComInfo/>},
-    { label: "PROJECTS", path: "/projects" , submenu: servicesSubmenu, subInfo: <ProInfo/>}
+    { label: "SERVICES", path: "/services", submenu: servicesSubmenu, subInfo: <SerInfo/> },
+    { label: "INDUSTRIES", path: "/industries", submenu: industriesSubmenu, subInfo: <IndInfo/> },
+    { label: "TECH STACK", path: "/tech-stack", submenu: techstackSubmenu, subInfo: <TecInfo/> },
+    { label: "COMPANY", path: "/company", submenu: companySubmenu, subInfo: <ComInfo/> },
+    { label: "PROJECTS", path: "/projects", submenu: [], subInfo: <ProInfo/> }
 ];
 export default function Navbar() {
     const [showModal, setShowModal] = useState(false);
@@ -180,13 +387,39 @@ export default function Navbar() {
                                         <div className="flex-2/3">
                                         <ul className="py-9 columns-3 gap-8 bg-white sm:h-screen">
                                         {submenu.map((item) => (
-                                            <li key={item} className="justify-center py-4">
-                                                <a
-                                                    href="#"
-                                                    className="block px-4 py-2 hover:bg-gray-100 text-sm"
-                                                >
-                                                    {item}
-                                                </a>
+                                            <li key={item.label} className="justify-center py-4">
+                                                {item.path ? (
+                                                    <a
+                                                        href={item.path}
+                                                        className="block px-4 py-2 hover:bg-gray-100 text-sm font-semibold text-[#405EA9]"
+                                                    >
+                                                        {item.label}
+                                                    </a>
+                                                ) : (
+                                                    <span className="block px-4 py-2 text-sm font-semibold text-gray-700 cursor-default">
+                                                        {item.label}
+                                                    </span>
+                                                )}
+                                                {item.submenu && (
+                                                    <ul className="pl-4">
+                                                        {item.submenu.map((subItem) => (
+                                                            <li key={subItem.label}>
+                                                                {subItem.path ? (
+                                                                    <a
+                                                                        href={subItem.path}
+                                                                        className="block px-4 py-1 hover:bg-gray-100 text-sm text-[#405EA9]"
+                                                                    >
+                                                                        {subItem.label}
+                                                                    </a>
+                                                                ) : (
+                                                                    <span className="block px-4 py-1 text-sm text-gray-700 cursor-default">
+                                                                        {subItem.label}
+                                                                    </span>
+                                                                )}
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
                                             </li>
                                         ))}
                                         </ul>
@@ -288,10 +521,33 @@ export default function Navbar() {
                             {submenu && openSubmenus[label] && (
                                 <ul className="pl-4 text-sm text-[#405EA9] space-y-1">
                                     {submenu.map((item) => (
-                                        <li key={item}>
-                                            <a href="#" className="block py-1">
-                                                {item}
-                                            </a>
+                                        <li key={item.label}>
+                                            {item.path ? (
+                                                <a href={item.path} className="block py-1 font-semibold">
+                                                    {item.label}
+                                                </a>
+                                            ) : (
+                                                <span className="block py-1 font-semibold text-gray-700 cursor-default">
+                                                    {item.label}
+                                                </span>
+                                            )}
+                                            {item.submenu && (
+                                                <ul className="pl-4 space-y-1">
+                                                    {item.submenu.map((subItem) => (
+                                                        <li key={subItem.label}>
+                                                            {subItem.path ? (
+                                                                <a href={subItem.path} className="block py-1 text-[#405EA9]">
+                                                                    {subItem.label}
+                                                                </a>
+                                                            ) : (
+                                                                <span className="block py-1 text-gray-700 cursor-default">
+                                                                    {subItem.label}
+                                                                </span>
+                                                            )}
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
                                         </li>
                                     ))}
                                 </ul>
