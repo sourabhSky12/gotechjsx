@@ -1,12 +1,11 @@
 import React from 'react'
 import CallToAction from '../components/common/CallToAction'
 import BluePart from '../components/common/BluePart'
-const handleCTA = () => {
-  // Navigate, scroll, or open modal
-  console.log("CTA clicked");
-};
+import ContactModal from '../components/common/ContactModal'
+import  { useState } from 'react';
 const Home = () => {
  
+const [showModal, setShowModal] = useState(false);
 
   return (
     <>
@@ -69,8 +68,12 @@ const Home = () => {
 title="READY TO START YOUR DIGITAL TRANSFORMATION JOURNEY?"
     subtitle="With our innovative and industry-proven services, we’ll help you unlock new growth opportunities."
     buttonText="GET INFO"
-    onClick={handleCTA}
+    onClick={() => setShowModal(true)}
+    
 />
+
+<ContactModal show={showModal} onClose={() => setShowModal(false)} />
+
 <BluePart/>
 
     </>

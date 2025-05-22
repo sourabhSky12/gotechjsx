@@ -1,6 +1,8 @@
 import React from 'react'
 import GridRightStatsCard from '../../components/common/GridRightStatsCard'
 import IconTopCard from '../../components/common/IconTopCard'
+import RightSideTextDesc from '../../components/common/RightSideTextDesc'
+
 
 const Company = () => {
    
@@ -28,9 +30,15 @@ const companyData = [
 ]
   return (
     <>
+    <RightSideTextDesc
+    heading="EXPERIENCE EXCELLENCE WITH GO INFOTECH"
+    subheading="Excel Your Business with Custom Software Development Company in Udaipur"
+       
     
+    />
     <GridRightStatsCard/>
     <IconTopCard servicesData={companyData} />
+
     
     </>
   )

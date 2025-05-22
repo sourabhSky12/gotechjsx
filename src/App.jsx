@@ -92,6 +92,7 @@ function App() {
           <Route path="/company/aboutus" element={<AboutUs />} />
 
           <Route path="/projects" element={<Projects />} />
+
           <Route path="/services" element={<Sservices />} />
           <Route path="/services/androidappdev" element={<AndroidAppDev/>} />
           <Route path="/services/crossplatformdev" element={<CrossPlatformAppDev/>} /> 
@@ -107,7 +108,8 @@ function App() {
           <Route path="/services/clouddevopsserv" element={<CloudDevOpsServ/>} />
           <Route path="/services/staffag" element={<StaffAug/>} />
           
-
+            
+          
 
         </Routes>
       </main>

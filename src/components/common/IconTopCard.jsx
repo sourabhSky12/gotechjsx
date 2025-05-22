@@ -2,11 +2,11 @@ import React from 'react'
 
 
 
-const IconTopCard = ({ servicesData }) => {
+const IconTopCard = ({ servicesData ,heading="WHY CHOOSE US"}) => {
   return (
     <div className='w-full'>   
       <h2 className="text-2xl md:text-4xl font-bold sm:pt-5 mb-10 uppercase text-blue-900 lg:px-40">
-        WHY CHOOSE US
+        {heading}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:px-40 pb-10">
         {servicesData.map((service, index) => (

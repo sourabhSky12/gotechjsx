@@ -44,6 +44,29 @@ const services = [
       "Voice-enabled search engines for e-commerce platforms",
     ],
   },
+   {
+    title: "GENERATIVE CONTENT CREATION",
+    description:
+      "Design personalized content tailored to user preferences using Generative AI models.",
+    applications: [
+      "Generation of digital art for running ad campaigns",
+      "dynamic narrative tailored to gaming platforms",
+      "AI-powered audio composition for media and entertainment",
+    ],
+  },
+
+{
+    title: "PREDICTIVE MODELING",
+    description:
+      "Forecasting outcomes and trend-analysis using former data analysis and algorithms",
+    applications: [
+      "Predict future sales, market trends, and other forecasts",
+      "Risk assessment and projections for insurance concerns.",
+      "Forecast health results for medical institutions using AI/ML algorithms.",
+    ],
+  },
+
+
 ];
 
 

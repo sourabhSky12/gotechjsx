@@ -5,23 +5,23 @@ const servicesSubmenu = [{
     submenu: [
         {
             label: "Startup MVP Development",
-            path: "/startup-mvp-development"
+            path: "/services/startupmvpdev"
         },
         {
             label: "Web Development",
-            path: "/web-development"
+            path: "/services/webdev"
         },
         {
             label: "Mobile App Development",
-            path: "/mobile-app-development"
+            path: "/services/mobileappdev"
         },
         {
             label: "Android App Development",
-            path: "/android-app-development"
+            path: "/services/androidappdev"
         },
         {
             label: "Cross-Platform App Development",
-            path: "/cross-platform-app-development"
+            path: "/services/crossplatformdev"
         },
         {
             label: "Intelligent Automation",
@@ -29,32 +29,32 @@ const servicesSubmenu = [{
         },
         {
             label: "Digital Marketing Services",
-            path: "/digital-marketing-services"
+            path: "/services/digitalmarketingserv"
         },
         {
             label: "Search Engine Optimization",
-            path: "/search-engine-optimization"
+            path: "/services/searchengineoptimization"
         },
         {
             label: "PPC",
-            path: "/ppc"
+            path: "/services/ppc"
         },
         {
             label: "SMO/SMM",
-            path: "/smo-smm"
+            path: "/services/smosmm"
         },
         {
             label: "AI & ML Development",
-            path: "/ai-ml-development"
+            path: "/services/aimldev"
         },
     ]}
     ,{
         label: "Managed IT Services",
-        path: "/managed-it-services",
+        
         submenu: [
             {
                 label: "Staff Augmentation",
-                path: "/staff-augmentation"
+                path: "/services/staffag",
             },
             
         ]
@@ -68,76 +68,23 @@ const servicesSubmenu = [{
 const industriesSubmenu = [{
     label: "Fintech",
     path: "/industries/fintech",
-    submenu: [
-        {
-            label: "Banking Solutions",
-            path: "/industries/fintech/banking"
-        },
-        {
-            label: "Payment Processing",
-            path: "/industries/fintech/payments"
-        },
-        {
-            label: "Digital Wallets",
-            path: "/industries/fintech/digital-wallets"
-        }
-    ]
+   
 }, {
     label: "Healthcare",
     path: "/industries/healthcare",
-    submenu: [
-        {
-            label: "Telemedicine",
-            path: "/industries/healthcare/telemedicine"
-        },
-        {
-            label: "Hospital Management",
-            path: "/industries/healthcare/hospital-management"
-        },
-        {
-            label: "Patient Care",
-            path: "/industries/healthcare/patient-care"
-        }
-    ]
+   
 }, {
     label: "Media & Entertainment",
-    path: "/industries/media-entertainment",
-    submenu: [
-        {
-            label: "Streaming Platforms",
-            path: "/industries/media-entertainment/streaming"
-        },
-        {
-            label: "Content Management",
-            path: "/industries/media-entertainment/content"
-        }
-    ]
+    path: "/industries/mediaentertain",
+  
 }, {
     label: "Automotive",
     path: "/industries/automotive",
-    submenu: [
-        {
-            label: "Connected Cars",
-            path: "/industries/automotive/connected-cars"
-        },
-        {
-            label: "Fleet Management",
-            path: "/industries/automotive/fleet-management"
-        }
-    ]
+  
 }, {
     label: "E-Commerce",
-    path: "/industries/e-commerce",
-    submenu: [
-        {
-            label: "Online Retail",
-            path: "/industries/e-commerce/retail"
-        },
-        {
-            label: "Marketplace Solutions",
-            path: "/industries/e-commerce/marketplace"
-        }
-    ]
+    path: "/industries/ecomm",
+   
 }];
 
 const techstackSubmenu = [{
@@ -146,11 +93,11 @@ const techstackSubmenu = [{
     submenu: [
         {
             label: "Angular",
-            path: "/tech-stack/front-end/angular"
+            path: "/techstack/angular"
         },
         {
             label: "React",
-            path: "/tech-stack/front-end/react"
+            path: "/techstack/react"
         }
     ]
 }, {
@@ -159,23 +106,23 @@ const techstackSubmenu = [{
     submenu: [
         {
             label: "Node",
-            path: "/tech-stack/back-end/node"
+            path: "/techstack/node"
         },
         {
             label: "PHP",
-            path: "/tech-stack/back-end/php"
+            path: "/techstack/php"
         },
         {
             label: ".NET",
-            path: "/tech-stack/back-end/dotnet"
+            path: "/techstack/net"
         },
         {
             label: "Java",
-            path: "/tech-stack/back-end/java"
+            path: "/techstack/java"
         },
         {
             label: "Python",
-            path: "/tech-stack/back-end/python"
+            path: "/techstack/python"
         }
     ]
 }, {
@@ -184,79 +131,39 @@ const techstackSubmenu = [{
     submenu: [
         {
             label: "iOS",
-            path: "/tech-stack/mobile/ios"
+            path: "/techstack/ios"
         },
         {
             label: "Android",
-            path: "/tech-stack/mobile/android"
+            path: "/techstack/anderiod"
         },
         {
             label: "React Native",
-            path: "/tech-stack/mobile/react-native"
+            path: "/techstack/reactnative"
         },
         {
             label: "Flutter",
-            path: "/tech-stack/mobile/flutter"
+            path: "/techstack/flutter"
         }
     ]
 }];
 
 const companySubmenu = [{
     label: "Referral Program",
-    path: "/company/referral-program",
-    submenu: [
-        {
-            label: "Partner With Us",
-            path: "/company/referral-program/partner"
-        },
-        {
-            label: "Benefits",
-            path: "/company/referral-program/benefits"
-        }
-    ]
+    path: "/company/referralprogram",
+    
 }, {
     label: "Blogs",
     path: "/company/blogs",
-    submenu: [
-        {
-            label: "Technical Insights",
-            path: "/company/blogs/technical-insights"
-        },
-        {
-            label: "Industry News",
-            path: "/company/blogs/industry-news"
-        }
-    ]
+    
 }, {
     label: "Contact",
     path: "/company/contact",
-    submenu: [
-        {
-            label: "Get in Touch",
-            path: "/company/contact/get-in-touch"
-        },
-        {
-            label: "Support",
-            path: "/company/contact/support"
-        }
-    ]
+   
 }, {
     label: "About Us",
     path: "/company/about",
-    submenu: [
-        {
-            label: "Our Story",
-            path: "/company/about/our-story"
-        },
-        {
-            label: "Team",
-            path: "/company/about/team"
-        },
-        {
-            label: "Careers",
-            path: "/company/about/careers"
-        }
-    ]
+   
 }];
 
 const SerInfo = () => {

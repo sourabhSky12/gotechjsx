@@ -2,7 +2,7 @@ import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-const ServicesStartCount = () => {
+const ServicesStartCount = ({onClick}) => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   const stats = [
@@ -42,7 +42,9 @@ const ServicesStartCount = () => {
           </div>
         ))}
         <div className="pt-3">
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded invisible md:visible">
+        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded invisible md:visible"
+        onClick={onClick}
+        >
           BOOK A CALL
         </button>
       </div>
