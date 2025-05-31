@@ -6,7 +6,7 @@ import {
 } from "react-icons/fa";
 import BlueForm from "../forms/BlueForm";
 import ContactSection from "../common/ContactSection";
-
+import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
     <>
@@ -25,26 +25,31 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3">SERVICES</h3>
           <ul className="space-y-2 text-sm">
-            <li>Cloud & DevOps Services</li>
-            <li>AI & ML Development</li>
-            <li>UI/UX Design</li>
-            <li>E-Commerce App Development</li>
-            <li>Cross-Platform App Development</li>
+            <Link to='/cloud-devops-services' className="block"><li>Cloud & DevOps Services</li></Link>
+            <Link to='/services/aimldev' className="block"><li>AI & ML Development</li></Link>
+            <Link to='/services/aimldev' className="block"><li>UI/UX Design</li></Link>
+            <Link to='/industries/ecomm' className="block"><li>E-Commerce App Development</li></Link>
+            <Link to='/services/crossplatformdev' className="block"><li>Cross-Platform App Development</li></Link>
           </ul>
         </div>
 
         {/* Tech Stack */}
         <div>
           <h3 className="font-semibold mb-3">TECH STACK</h3>
-         
-          <ul className="space-y-2 text-sm">
-            <li>Angular</li>
-            <li>Node</li>
-            <li>.NET</li>
-            <li>Python</li>
-            <li>iOS / React Native</li>
-            <li>React / PHP / Java</li>
-            <li>Rails / Android / Flutter</li>
+        
+          <ul className="space-y-2 text-sm columns-2 ">
+          <Link to='/techstack/angular' className="block"><li>Angular</li></Link>
+          <Link to='/techstack/node' className="block">  <li>Node</li></Link>
+          <Link to='/techstack/net' className="block">  <li>.NET</li></Link>
+          <Link to='/techstack/python' className="block">  <li>Python</li></Link>
+          <Link to='/techstack/ios' className="block">  <li>iOS  </li></Link>
+          <Link to='/techstack/react' className="block">  <li>React </li></Link>
+          <Link to='/' className="block">  <li>Rails  </li></Link>
+          <Link to='/techstack/reactnative' className="block">  <li>React Native</li></Link>
+          <Link to='/techstack/php' className="block">  <li>PHP</li></Link>
+          <Link to='/techstack/java' className="block">  <li>Java</li></Link>
+          <Link to='/techstack/anderiod' className="block">  <li>Android</li></Link>
+          <Link to='/techstack/flutter' className="block">  <li>Flutter</li></Link>
           
           </ul>
          
@@ -54,13 +59,13 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-3">COMPANY</h3>
           <ul className="space-y-2 text-sm">
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
-            <li>About Us</li>
-            <li>Technologies</li>
-
-            <li>Blogs</li>
+            <Link to='/' className="block"><li>Home</li></Link>
+            <Link to='/services' className="block"><li>Services</li> </Link>          
+            <Link to='/company/contact' className="block"><li>Contact</li></Link>
+            <Link to='/company/contact' className="block"><li>About Us</li></Link>
+            <Link to='/tech-stack' className="block"><li>Technologies</li></Link>
+            <Link to='/' className="block"><li>Blogs</li></Link>
+            
           </ul>
         </div>
 

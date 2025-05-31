@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueBaseBord from '../../../../components/common/GridBlueBaseBord'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import CmsFramPhp from '../../../../components/php/CmsFramPhp'
+import GeneralFramePhp from '../../../../components/php/GeneralFramePhp'
+import EcommFramPhp from '../../../../components/php/EcommFramPhp'
 
 const Php = () => {
      const stats = [
@@ -90,6 +94,28 @@ const Php = () => {
       "We offer smooth PHP migration and upgrade services, allowing you to remain current with the latest PHP versions and ensuring optimal performance of your applications.",
   },
 ];
+
+  const [stacklist] = useState([
+    {
+      title: "GENERAL-PURPOSE FRAMEWORKS",
+      element: <GeneralFramePhp />,
+    },
+    {
+      title: "CMS FRAMEWORKS",
+      element: <CmsFramPhp />,
+    },
+    {
+      title: "E-COMMERCE FRAMEWORKS",
+      element: <EcommFramPhp />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
    <>
    
@@ -99,6 +125,14 @@ const Php = () => {
     headings="PHP SOFTWARE DEVELOPMENT SERVICES"
     blueBaseData={blueBaseData}
     /> 
+     {/* TECH STACK */}
+      <TechStackSection
+        title="GO INFOTECH’S EXPERTISE IN PHP DEVELOPMENT"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
    
    </>
   )

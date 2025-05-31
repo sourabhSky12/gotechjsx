@@ -1,14 +1,20 @@
-import React from 'react'
+
 import StatsSection from '../../../components/common/StatsSection'
 import IconTopCard from '../../../components/common/IconTopCard'
 import CallToAction from '../../../components/common/CallToAction'
 import BoxBaseBord from '../../../components/common/BoxBaseBord'
 import { useState } from 'react'
 import { DollarSign, Import, Lightbulb, Lock } from 'lucide-react';
-import GridBlueCard from '../../../components/common/GridBlueCard'
+import TechStackSection from '../../../components/common/TechStackSection'
 import CardMethodologyBase from '../../../components/common/CardMethodologyBase'
 import WhiteBgCard from '../../../components/common/WhiteBgCard'
 import ContactModal from '../../../components/common/ContactModal'
+import CmsEComm from '../../../components/eComm/CmsEComm'
+import { BackEComm } from '../../../components/eComm/BackEComm'
+import FrontEComm from '../../../components/eComm/FrontEComm'
+import UiUxEComm from '../../../components/eComm/UiUxEComm'
+
+
 const Ecomm = () => {
   const [showModal, setShowModal] = useState(false);
   const stats = [
@@ -178,12 +184,47 @@ const methodologyData = [
       'Offering comprehensive e-commerce solutions designed to boost sales. It serves as a pivotal tool for businesses, offering a range of features like CRM, payment gateways, etc. aimed at enhancing efficiency and optimizing operations.',
   },
 ];
+ const [stacklist] = useState([
+    {
+      title: "FRONT-END DEVELOPMENT",
+      element: <FrontEComm />,
+    },
+    {
+      title: "BACK-END DEVELOPMENT",
+      element: <BackEComm />,
+    },
+    {
+      title: "CMS FRAMEWORKS",
+      element: <CmsEComm />,
+    },
+    {
+      title: "UI/UX DESIGN",
+      element: <UiUxEComm/>,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
     
     
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
+
+    {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
+
          <CallToAction
      title="ADVANTAGES OF PARTNERING WITH GO INFOTECH FOR SOFTWARE DEVELOPMENT"
    

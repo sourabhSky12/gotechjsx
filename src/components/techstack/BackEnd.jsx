@@ -20,7 +20,7 @@ const BackEnd = () => {
     { name: "PHP", image: "PHP-1.png" },
     { name: "Python", image: "Python-1.png" },
     { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" }
+    { name: "Rust", image: "Rust-1.png" },
   ];
 
   return (
@@ -29,6 +29,7 @@ const BackEnd = () => {
       description={description}
       stats={stats}
       technologies={technologies}
+      
     />
   );
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CallToAction from '../components/common/CallToAction'
 import BluePart from '../components/common/BluePart'
 import ContactModal from '../components/common/ContactModal'
@@ -11,14 +11,15 @@ import CustomSoftware from '../components/ourServices/CustomSoftware'
 import IntelAuto from '../components/ourServices/IntelAuto'
 import ManagedIt from '../components/ourServices/ManagedIt'
 
-import SectionBlock from '../components/ourServices/ServiceSection'
+
 import FrontEnd from '../components/techstack/FrontEnd'
 import BackEnd from '../components/techstack/BackEnd'
 import MobileApp from '../components/techstack/MobileApp'
 import UiUx from '../components/techstack/UiUx'
 import ServiceItem from '../components/common/ServiceItem'
 import TechStackSection from '../components/common/TechStackSection'
-
+import HomeNumbSec from '../components/common/HomeNumbSec';
+import LogoSlider from '../components/common/LogoSlider';
 
 
 
@@ -29,7 +30,7 @@ const [showModal, setShowModal] = useState(false);
   const ImageIcon = ({ path, text }) => {
     <img src={path} alt={text} />;
   };
-  const [serviceList, setServiceList] = useState([
+  const [serviceList] = useState([
     {
       icon: <ImageIcon path={"/Aug.svg"} text={"AUGMENTATION"} />,
       title: "STAFF AUGMENTATION",
@@ -49,7 +50,7 @@ const [showModal, setShowModal] = useState(false);
       ),
       title: "CUSTOM SOFTWARE DEVELOPMENT",
       element: <CustomSoftware />,
-      // element: <getSoftware />,
+      
     },
     {
       icon: <ImageIcon path={"ItConsul.svg"} text={"Intelligent Automation"} />,
@@ -75,7 +76,7 @@ const [showModal, setShowModal] = useState(false);
   };
   console.log(selectedService);
 
-  const [stacklist, setstacklist] = useState([
+  const [stacklist] = useState([
     {
       title: "FRONT-END DEVELOPMENT",
       element: <FrontEnd />,
@@ -103,46 +104,8 @@ const [showModal, setShowModal] = useState(false);
 
   return (
     <>
-    {/* OUR SERVICES */}
-
-    <div className="pl-8 pr-0 py-10 sm:px-10 md:px-20 lg:px-40">
-        {/* Header */}
-        <h1 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center sm:text-left">
-          OUR SERVICES
-        </h1>
-
-        {/* Service List + Selected Content */}
-        <div className="flex flex-col lg:flex-row">
-          {/* Service List - Full width on small screens, column on large */}
-          <div className="lg:basis-2/5 ">
-            <div className="w-screen -ml-4 sm:ml-0 sm:w-auto sm:pr-0 lg:pr-0 flex overflow-x-auto space-x-4 text-lg sm:text-xl text-center lg:flex-col lg:space-x-0 lg:space-y-4">
-              {serviceList.map((item) => (
-                <ServiceItem
-                  key={item.title}
-                  icon={item.icon}
-                  title={item.title}
-                  element={item.element}
-                  isSelected={selectedTitle === item.title}
-                  onClick={() => handleServiceClick(item)}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Selected Service Content */}
-          <div className="mt-6 lg:mt-0 lg:ml-10 lg:basis-3/5">
-            {selectedService}
-          </div>
-        </div>
-      </div>
-
-      {/* TECH STACK */}
-      <TechStackSection
-        title="TECH STACK"
-        stackList={stacklist}
-        selectedStack={selectedStack}
-        onStackClick={handleStackClick}
-      />
+   
+   
 
     {/* Starting Part */}
 
@@ -175,20 +138,8 @@ const [showModal, setShowModal] = useState(false);
     
 
     {/* Stats Cards */}
-    <div className="flex flex-row sm:flex-row justify-between text-center mt-8 gap-6 sm:gap-0">
-      <div className="flex-1">
-        <h1 className="text-3xl text-blue-800 font-bold">200</h1>
-        <p className="text-blue-950 font-semibold">Projects</p>
-      </div>
-      <div className="flex-1">
-        <h1 className="text-3xl text-blue-800 font-bold">5</h1>
-        <p className="text-blue-950 font-semibold">Years of Experience</p>
-      </div>
-      <div className="flex-1">
-        <h1 className="text-3xl text-blue-800 font-bold">70</h1>
-        <p className="text-blue-950 font-semibold">Happy Clients</p>
-      </div>
-    </div>
+   
+    <HomeNumbSec/>
   </div>
 
   {/* Image Section */}
@@ -196,6 +147,43 @@ const [showModal, setShowModal] = useState(false);
     <img className="max-w-full h-auto object-contain" src="/spw.png" alt="spw image" />
   </div>
 </div>
+<div className='sm:px-40'>
+<div className="client-slider ">
+                <LogoSlider />
+            </div>
+ </div>        
+ {/* OUR SERVICES */}
+
+    <div className="pl-8 pr-0 py-10 sm:px-10 md:px-20 lg:px-40">
+        {/* Header */}
+        <h1 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center sm:text-left">
+          OUR SERVICES
+        </h1>
+
+        {/* Service List + Selected Content */}
+        <div className="flex flex-col lg:flex-row">
+          {/* Service List - Full width on small screens, column on large */}
+          <div className="lg:basis-2/5 ">
+            <div className="w-screen -ml-4 sm:ml-0 sm:w-auto sm:pr-0 lg:pr-0 flex overflow-x-auto space-x-4 text-lg sm:text-xl text-center lg:flex-col lg:space-x-0 lg:space-y-4">
+              {serviceList.map((item) => (
+                <ServiceItem
+                  key={item.title}
+                  icon={item.icon}
+                  title={item.title}
+                  element={item.element}
+                  isSelected={selectedTitle === item.title}
+                  onClick={() => handleServiceClick(item)}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Selected Service Content */}
+          <div className="mt-6 lg:mt-0 lg:ml-10 lg:basis-3/5">
+            {selectedService}
+          </div>
+        </div>
+      </div>
 
 {/* Call to action part */}
 
@@ -209,7 +197,20 @@ title="READY TO START YOUR DIGITAL TRANSFORMATION JOURNEY?"
 
 <ContactModal show={showModal} onClose={() => setShowModal(false)} />
 
+   
+
 <BluePart/>
+
+
+
+  {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
 
     </>
   )

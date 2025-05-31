@@ -9,6 +9,11 @@ import { useState } from 'react'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import ContactModal from '../../../../components/common/ContactModal'
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import FrontEnd from '../../../../components/techstack/FrontEnd'
+import BackEnd from '../../../../components/techstack/BackEnd'
+import MobileApp from '../../../../components/techstack/MobileApp'
+import UiUx from '../../../../components/techstack/UiUx'
 const StaffAug = () => {
   const [showModal, setShowModal] = useState(false);
      const stats = [
@@ -218,6 +223,31 @@ const methodData=[
   },
 
 ];
+
+  const [stacklist, setstacklist] = useState([
+    {
+      title: "FRONT-END DEVELOPMENT",
+      element: <FrontEnd />,
+    },
+    {
+      title: "BACK-END DEVELOPMENT",
+      element: <BackEnd />,
+    },
+    {
+      title: "MOBILE APP DEVELOPMENT",
+      element: <MobileApp />,
+    },
+    {
+      title: "UI/UX DESIGN",
+      element: <UiUx />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
    <>
    
@@ -275,6 +305,15 @@ const methodData=[
 
        
   />
+  
+  {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
     
    </>
   )

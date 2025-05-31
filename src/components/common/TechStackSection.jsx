@@ -10,15 +10,15 @@ const TechStackSection = ({ title, stackList, selectedStack, onStackClick }) => 
 
       {/* Stack List - Responsive Horizontal Bar */}
       <div className="w-full mb-8">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {stackList.map((item) => (
             <button
               key={item.title}
               onClick={() => onStackClick(item)}
-              className={`px-3 py-2 sm:px-4 sm:py-3 rounded-lg transition-colors text-sm sm:text-base ${
+              className={`px-3 py-2 sm:px-4 sm:py-3 rounded-lg transition-colors cursor-pointer font-medium text-lg sm:text-xl text-blue-900 ${
                 selectedStack === item.element
-                  ? 'bg-blue-900 text-white'
-                  : 'bg-gray-100 text-blue-900 hover:bg-gray-200'
+                  ? 'underline  '
+                  : 'no-underline'
               }`}
             >
               {item.title}

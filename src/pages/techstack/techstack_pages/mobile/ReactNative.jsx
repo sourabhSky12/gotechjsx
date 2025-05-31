@@ -1,7 +1,9 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import CardGridHovBase from '../../../../components/common/CardGridHovBase'
+import TechLib from '../../../../components/reactNative/TechLib'
+import TechStackSection from '../../../../components/common/TechStackSection'
 
 const ReactNative = () => {
     const stats = [
@@ -84,6 +86,22 @@ const cardData = [
     description: 'Ensure the long-term viability and compatibility of your application with React Natives backward-compatible technology, allowing your product to remain relevant and robust as mobile technologies evolve.',
   },
 ];
+
+  const [stacklist] = useState([
+    {
+      title: "TECHNOLOGIES & LIBRARIES",
+      element: <TechLib/>,
+    },
+  
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+  console.log(selectedStack);
+
   return (
    <>
    <StatsSection stats={stats} content={content} />
@@ -97,6 +115,13 @@ const cardData = [
         columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
    
    />
+    <TechStackSection
+        title="REACT NATIVE DEVELOPMENT TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
    </>
   )
 }

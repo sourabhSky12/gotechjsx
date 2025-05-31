@@ -10,6 +10,11 @@ import CardMethodologyBase from '../../../../components/common/CardMethodologyBa
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import { useState } from 'react'
 import ContactModal from '../../../../components/common/ContactModal'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import CrossPlatFram from '../../../../components/crossPlat/CrossPlatFram'
+import BackCrossPlat from '../../../../components/crossPlat/BackCrossPlat'
+import CloudCrossPlat from '../../../../components/crossPlat/CloudCrossPlat'
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const CrossPlatformAppDev = () => {
 const [showModal, setShowModal] = useState(false);
    const stats = [
@@ -171,15 +176,120 @@ const methodologyData = [
       'Businesses that are aiming for expansion on the Android and iOS platforms simultaneously. We specialize in providing a unified mobile app experience to users of different devices by complementing the existing in-house teams.',
   },
 ];
+  const [stacklist] = useState([
+    {
+      title: "CROSS-PLATFORM FRAMEWORKS",
+      element: <CrossPlatFram />,
+    },
+    {
+      title: "BACKEND TECHNOLOGIES",
+      element: <BackCrossPlat />,
+    },
+    {
+      title: "CLOUD PLATFORMS",
+      element: <CloudCrossPlat />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+  const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION',
+    content: {
+      paragraphs: [
+        `Amplify your in-house staff with the expertise of Go InfoTech Solution for our seasoned cross-platform developers. Be it a short-run project or a long-term collaborative endeavor.`,
+      ],
+      heading: 'OUR INVALUABLE CONTRIBUTION VIA:',
+      list: [
+        'Connection with specialized cross-platform developers.',
+        'Rapid onboarding to integrate your operations seamlessly.',
+        'Flexible to scale up or down based on project needs.',
+        'Expertise in leading cross-platform tools and functionalities.',
+      ],
+    },
+  },
+  {
+    title: 'FULL-SCALE DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We are dedicated to turning your vision into reality, administering every aspect of your cross-platform app development, and making sure that there is uniformity and high performance across all devices.',
+      ],
+      heading: 'OUR END-TO-END APPROACH:',
+      list: [
+        'Extensive analysis and planning.',
+        'Designed to maintain uniformity across iOS, Android, and other platforms. ',
+        'Thorough testing for performance & user experience. ',
+        'Deployment & audit trails post-launch.',
+      ],
+    },
+  },
+   {
+    title: 'POC/MVP APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'After quickly validating your app ideas, we develop a Proof of Concept (PoC) or Minimum Viable Product (MVP) to assist you in exploring the possibilities without committing to a full-scale investment.',
+      ],
+      heading: '  BRINGING YOUR IDEA TO LIFE:',
+      list: [
+        'Robust development to showcase your vision.',
+        'Feedback-driven updates of functionalities. ',
+        'Scalable solutions for full-scale development;',
+        'Cost-effective approach to evaluating market viability.',
+      ],
+    },
+  },
+   {
+    title: 'UI/UX DESIGN SERVICES',
+    content: {
+      paragraphs: [
+        'Designing a uniform user experience across all platforms. Our UI/UX designers are committed to crafting an interactive, user-friendly, and visually appealing app following a user-centric approach.',
+      ],
+      heading: ' CRAFTING AN ELEVATED USER EXPERIENCE:',
+      list: [
+        'User-centric designs for better engagement.',
+        'Uniformity of designs across all platforms.',
+        'Interactive prototypes based on feedback.',
+        'Compliance with platform-specific design protocols.',
+      ],
+    },
+  },
+   {
+    title: 'CROSS-PLATFORM DEVELOPMENT CONSULTING',
+    content: {
+      paragraphs: [
+        'Our professionals are dedicated to navigating your digital journey by meticulously strategizing your cross-platform development, properly selecting the right tools, and keeping your business needs in mind.',
+      ],
+      heading: ' NAVIGATING CROSS-PLATFORM DEVELOPMENT:',
+      list: [
+        'Meticulously plan based on your business objectives.',
+        'Suggestions on optimal frameworks and tools. ',
+        'Streamlining effectiveness & Safety protocols. ',
+        'Continual upkeep, assistance, & alignment by trend-tracking.',
+      ],
+    },
+  },
+
+];
   return (
     <>
     
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={crossPlatData} />
      <GridBlueBaseBord blueBaseData={blueBaseData} headings="ADVANTAGES OF CROSS-PLATFORM APP DEVELOPMENT"/>
-   {/*  
-    <GridBlueCard/>
-     */}
+      <SelectSidebar services={sidebarData} headingSidebar={"CROSS-PLATFORM DEVELOPMENT SERVICES"}  /> 
+  {/* TECH STACK */}
+      <TechStackSection
+        title="CROSS-PLATFORM TECH EXPERTISE"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
      <RightSideTextDesc  heading="TECH INNOVATIONS FOR YOUR WEB APP"
     subheading="We are a renowned IT Company in Udaipur, dedicated to serving you and your unique business needs using our cutting-edge technology and innovation, while also ensuring that it is functional. We craft interactive and scalable web solutions to create captivating and visually appealing web applications."
     />

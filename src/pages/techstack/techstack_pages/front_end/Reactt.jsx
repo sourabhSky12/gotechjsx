@@ -1,10 +1,12 @@
-import React from 'react'
+
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import CallToAction from '../../../../components/common/CallToAction'
-import GridBlueCard from '../../../../components/common/GridBlueCard'
+import TechStackSection from '../../../../components/common/TechStackSection'
 import { useState } from 'react'
 import ContactModal from '../../../../components/common/ContactModal'
+import FramAndLibReact from '../../../../components/react/FramAndLibReact'
+import BackTechReact from '../../../../components/react/BackTechReact'
 const Reactt = () => {
   const stats = [
    { value: 4, label: "React specialists worldwide", suffix: "+" },
@@ -58,7 +60,23 @@ const reactData = [
     icon: '⚙️',
   },
 ];
+const [stacklist] = useState([
+    {
+      title: "REACT FRAMEWORKS & LIBRARIES",
+      element: <FramAndLibReact />,
+    },
+    {
+      title: "BACKEND TECHNOLOGIES FOR REACT",
+      element: <BackTechReact />,
+    },
+   
+  ]);
 
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
    <>
    <StatsSection stats={stats} content={content}/>
@@ -71,6 +89,15 @@ const reactData = [
     
     />
      <ContactModal show={showModal} onClose={() => setShowModal(false)} />
+
+       {/* TECH STACK */}
+      <TechStackSection
+        title="REACT DEVELOPMENT TECH-STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
 
    {/* 
    <GridBlueCard/>

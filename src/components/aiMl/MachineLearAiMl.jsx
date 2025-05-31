@@ -1,0 +1,36 @@
+import TechStackContent from "../common/TechStackContent";
+
+const MachineLearAiMl = () => {
+ const title = "MACHINE LEARNING (ML)";
+  const description = "At Go InfoTech, we leverage our excellence in ML, NLP, computer vision, and predictive analytics, we develop custom AI solutions tailored to your specific requirements. From responsive chatbots and virtual assistants to recommendation algorithms and predictive models, we develop powerful AI applications that drive business growth.";
+  
+  const stats = [
+    "Crafting predictive analysis for finance, healthcare, e-commerce, and other sectors",
+    "Data-driven automation of decision-making process;",
+    "Personalize products via user behavior understanding."
+  ];
+
+  const technologies = [
+    { name: ".NET", image: "NET-1.png" },
+    { name: "Go", image: "GOlang-1.png" },
+    { name: "Java", image: "Java-1.png" },
+    { name: "Scala", image: "Scala-1.png" },
+    { name: "Node JS", image: "NodeJS-1.png" },
+    { name: "PHP", image: "PHP-1.png" },
+    { name: "Python", image: "Python-1.png" },
+    { name: "Ruby", image: "Ruby-1.png" },
+    { name: "Rust", image: "Rust-1.png" },
+  ];
+
+  return (
+    <TechStackContent
+      title={title}
+      description={description}
+      stats={stats}
+      technologies={technologies}
+      
+    />
+  );
+}
+
+export default MachineLearAiMl

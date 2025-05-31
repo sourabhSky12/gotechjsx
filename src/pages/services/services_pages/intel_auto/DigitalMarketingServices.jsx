@@ -1,7 +1,12 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import BoxBaseBord from '../../../../components/common/BoxBaseBord'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import SocialMediaMangeDm from '../../../../components/digitalMarket/SocialMediaMangeDm'
+import SearchEngineDm from '../../../../components/digitalMarket/SearchEngineDm'
+import EmailDm from '../../../../components/digitalMarket/EmailDm'
+import SocialMediaCampDm from '../../../../components/digitalMarket/SocialMediaCampDm'
 const DigitalMarketingServices = () => {
     const stats = [
    { value: 30, label: "Team of experts", suffix: "+" },
@@ -112,11 +117,44 @@ const DigitalMarketingServices = () => {
     
   },
 ];
+ const [stacklist] = useState([
+    {
+      title: "SOCIAL MEDIA MANAGEMENT",
+      element: <SocialMediaMangeDm />,
+    },
+    {
+      title: "SEARCH ENGINE OPTIMIZATION",
+      element: <SearchEngineDm />,
+    },
+    {
+      title: "E-MAIL MARKETING",
+      element: <EmailDm/>,
+    },
+    {
+      title: "SOCIAL MEDIA CAMPAIGNS",
+      element: <SocialMediaCampDm />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
    <>
    
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={crossPlatData}/>
+     {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
     <BoxBaseBord headsection="INDUSTRIES WE SERVE"  steps={roadmapData}/>
    
    

@@ -1,10 +1,18 @@
-import React from 'react'
+import LogoSlider from '../../../components/common/LogoSlider'
 import StatsSection from '../../../components/common/StatsSection'
-import BoxBaseBord from '../../../components/common/BoxBaseBord'
+import { ImageIcon } from 'lucide-react'
 import GridBlueCard from '../../../components/common/GridBlueCard'
 import CardGridHovBase from '../../../components/common/CardGridHovBase'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import CardMethodologyBase from '../../../components/common/CardMethodologyBase'
+import { useState } from 'react'
+import StaffAug from '../../../components/ourServices/StaffAug'
+import ItConsulting from '../../../components/ourServices/ItConsulting'
+import CustomSoftware from '../../../components/ourServices/CustomSoftware'
+import IntelAuto from '../../../components/ourServices/IntelAuto'
+import ManagedIt from '../../../components/ourServices/ManagedIt'
+import ServiceItem from '../../../components/common/ServiceItem'
+
 const ReferralProgram = () => {
    const stats = [
    { value: 150, label: "mobile development experts", suffix: "+" },
@@ -112,10 +120,63 @@ const methodologyData = [
      },
  
 ];
+  const ImageIcon = ({ path, text }) => {
+    <img src={path} alt={text} />;
+  };
+  const [serviceList] = useState([
+    {
+      icon: <img src='/Aug.svg'></img>,
+      title: "STAFF AUGMENTATION",
+      element: <StaffAug />,
+    },
+    { icon: <img src='/ItConsul.svg'/>,
+      
+      title: "IT CONSULTING",
+      element: <ItConsulting />,
+    },
+    {
+      icon: <img src='/ItConsul.svg'/>,
+      title: "CUSTOM SOFTWARE DEVELOPMENT",
+      element: <CustomSoftware />,
+      
+    },
+    {
+       icon: <img src='/ItConsul.svg'/>,
+      title: "INTELLIGENT AUTOMATION",
+      element: <IntelAuto />,
+    },
+    {
+       icon: <img src='/ItConsul.svg'/>,
+      title: "MANAGED IT SERVICES",
+      element: <ManagedIt />,
+    },
+  ]);
+  const [selectedService, setSelectedService] = useState(
+    serviceList[0].element
+  );
+
+
+  const [selectedTitle, setSelectedTitle] = useState(serviceList[0].title);
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service.element);
+    setSelectedTitle(service.title);
+  };
+  console.log(selectedService);
+
   return (
    <>
    
    <StatsSection stats={stats} content={content}/>
+   
+   <div className='sm:px-40'>
+<div className="client-slider ">
+                <LogoSlider />
+            </div>
+ </div>  
+
+
+
      <CardMethodologyBase
      heading="WHO MIGHT BE SUITABLE FOR THE PROGRAM"
         items={methodologyData}
@@ -136,6 +197,38 @@ const methodologyData = [
         columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2"
    
    />
+
+ <div className="pl-8 pr-0 py-10 sm:px-10 md:px-20 lg:px-40">
+        {/* Header */}
+        <h1 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center sm:text-left">
+          OUR SERVICES
+        </h1>
+
+        {/* Service List + Selected Content */}
+        <div className="flex flex-col lg:flex-row">
+          {/* Service List - Full width on small screens, column on large */}
+          <div className="lg:basis-2/5 ">
+            <div className="w-screen -ml-4 sm:ml-0 sm:w-auto sm:pr-0 lg:pr-0 flex overflow-x-auto space-x-4 text-lg sm:text-xl text-center lg:flex-col lg:space-x-0 lg:space-y-4">
+              {serviceList.map((item) => (
+                <ServiceItem
+                  key={item.title}
+                  icon={item.icon}
+                  title={item.title}
+                  element={item.element}
+                  isSelected={selectedTitle === item.title}
+                  onClick={() => handleServiceClick(item)}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Selected Service Content */}
+          <div className="mt-6 lg:mt-0 lg:ml-10 lg:basis-3/5">
+            {selectedService}
+          </div>
+        </div>
+      </div>
+
    <GridBlueCard
     
     title="INDUSTRIES Go InfoTech SOLUTION SERVES:"

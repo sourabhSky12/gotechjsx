@@ -176,12 +176,12 @@ const methodData=[
     
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={icontopData}/>
-    <RightSideTextDesc  heading="ANDROID SOLUTIONS TO INDUSTRY-SPECIFIC NEEDS"
-    subheading="Tailoring Android solutions to meet industry-specific demands, we bridge the gap between technology and diverse sectors, fostering growth and innovation through customized applications."
-    />
+    
     <WhiteBgCard 
      whitecards={whitecardsData}
     columns={3}
+    heading="ANDROID SOLUTIONS TO INDUSTRY-SPECIFIC NEEDS"
+     subheading="Tailoring Android solutions to meet industry-specific demands, we bridge the gap between technology and diverse sectors, fostering growth and innovation through customized applications."
     />
     <GridBlueCard
     title="TECH INNOVATIONS FOR YOUR ANDROID APP"

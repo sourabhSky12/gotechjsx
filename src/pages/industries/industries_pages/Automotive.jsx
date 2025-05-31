@@ -1,14 +1,18 @@
-import React from 'react'
+
 import StatsSection from '../../../components/common/StatsSection'
 import IconTopCard from '../../../components/common/IconTopCard'
 import CallToAction from '../../../components/common/CallToAction'
 import BoxBaseBord from '../../../components/common/BoxBaseBord'
-import GridBlueCard from '../../../components/common/GridBlueCard'
+import TechStackSection from '../../../components/common/TechStackSection'
 import { useState } from 'react'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import WhiteBgCard from '../../../components/common/WhiteBgCard'
 import CardMethodologyBase from '../../../components/common/CardMethodologyBase'
 import ContactModal from '../../../components/common/ContactModal'
+import FrontEnd from '../../../components/techstack/FrontEnd'
+import BackEnd from '../../../components/techstack/BackEnd'
+import MobileApp from '../../../components/techstack/MobileApp'
+import UiUx from '../../../components/techstack/UiUx'
 const Automotive = () => {
   const [showModal, setShowModal] = useState(false);
    const stats = [
@@ -178,11 +182,45 @@ const methodologyData = [
       'A comprehensive solution designed to revolutionize the automotive industry. It serves as a pivotal tool for businesses, offering a range of features aimed at enhancing efficiency and optimizing for a swift driving experience.',
   },
 ];
+ const [stacklist] = useState([
+    {
+      title: "FRONT-END DEVELOPMENT",
+      element: <FrontEnd />,
+    },
+    {
+      title: "BACK-END DEVELOPMENT",
+      element: <BackEnd />,
+    },
+    {
+      title: "MOBILE APP DEVELOPMENT",
+      element: <MobileApp />,
+    },
+    {
+      title: "UI/UX DESIGN",
+      element: <UiUx />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
     
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
+
+    {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
          <CallToAction
      title="ADVANTAGES OF PARTNERING WITH GO INFOTECH FOR FINTECH SOFTWARE DEVELOPMENT"
    

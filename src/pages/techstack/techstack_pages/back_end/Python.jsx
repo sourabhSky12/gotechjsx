@@ -1,10 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import RightSideTextDesc from '../../../../components/common/RightSideTextDesc'
 import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase'
+import TechStackSection from '../../../../components/common/TechStackSection'
 const Python = () => {
     const stats = [
    { value: 20, label: "experienced Java specialists worldwide", suffix: "+" },
@@ -118,11 +119,46 @@ const methodologyData = [
       'React synergizes effectively with Pythons back-end capabilities to develop responsive web applications. This amalgamation is beneficial for creating interactive user interfaces with real-time updates, blending Reacts dynamic front-end with Pythons robust server-side logic.',
   },
 ];
+
+  const [stacklist] = useState([
+    {
+      title: "FRONT-END DEVELOPMENT",
+      element: <FrontEnd />,
+    },
+    {
+      title: "BACK-END DEVELOPMENT",
+      element: <BackEnd />,
+    },
+    {
+      title: "MOBILE APP DEVELOPMENT",
+      element: <MobileApp />,
+    },
+    {
+      title: "UI/UX DESIGN",
+      element: <UiUx />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
     
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
+
+     {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
      <RightSideTextDesc  heading="TECH INNOVATIONS FOR YOUR WEB APP"
     subheading="Empower your application with cutting-edge technological innovations, ensuring it stands out as revolutionary, not just functional. Stay ahead of the curve, remain relevant, and captivate your audience."
     />

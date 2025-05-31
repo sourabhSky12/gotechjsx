@@ -2,9 +2,13 @@ import React from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueCard from '../../../../components/common/GridBlueCard'
-
-import RightSideTextDesc from '../../../../components/common/RightSideTextDesc'
 import WhiteBgCard from '../../../../components/common/WhiteBgCard'
+import { useState } from 'react'
+import BackAndroid from '../../../../components/android/BackAndroid'
+import CloudAndroid from '../../../../components/android/CloudAndroid'
+import MobileTechAnd from '../../../../components/android/mobileTechAnd'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const AndroidAppDev = () => {
   
  const stats = [
@@ -151,21 +155,167 @@ const andAppvData=[
   },
 
 ];
+  const [stacklist] = useState([
+    {
+      title: "MOBILE TECHNOLOGIES",
+      element: <MobileTechAnd/>,
+    },
+    {
+      title: "BACKEND TECHNOLOGIES",
+      element: <BackAndroid/>,
+    },
+    {
+      title: "CLOUD PLATFORMS",
+      element: <CloudAndroid/>,
+    },
+   
+  ]);
 
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+
+ const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR ANDROID PRODUCTS',
+    content: {
+      paragraphs: [
+        `We make sure to enhance your team’s proficiency with seasoned Android developers. We are dedicated to serving you with excellence while incorporating scalability, efficiency, and expertise that is custom-curated to your unique needs.`,
+      ],
+      heading: '  WHY PARTNER WITH US:',
+      list: [
+        'Access to highly-skilled Android developers.',
+        'Flexible models that align with your project’s scale & complexity.',
+        'Streamlined integration with your existing team & operations.',
+        'Cost-effective solutions for your unique development needs.',
+        'Expertise in the evolving Android technologies.',
+      ],
+    },
+  },
+  {
+    title: 'ANDROID NATIVE APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We offer exceptional services by designing high-quality Android Native Apps that are custom-curated by using your ideas as a base and making sure that they are responsive to the Android platform’s capabilities.',
+      ],
+      heading: 'REACH OUT TO US FOR:',
+      list: [
+        'Seamless & Efficient Native Android apps;',
+        'Harnessing Android-specific Features & functionalities ',
+        'Compatibility with Diverse Android Devices. ',
+        
+      ],
+    },
+  },
+   {
+    title: 'HYBRID APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We specialize in developing hybrid apps that are integrated with native and web solutions that are crafted by making use of standard web technologies and enclosed within a native app shell.',
+      ],
+      heading: 'PARTNER WITH US FOR:',
+      list: [
+        'Uniform Applications across various Platforms.',
+        'Rapid development cycles utilizing a single codebase. ',
+        'Cost-effective solutions that are akin to native applications. ',
+       
+      ],
+    },
+  },
+   {
+    title: 'MOBILE APP UI/UX DESIGN',
+    content: {
+      paragraphs: [
+        'We stand as a prominent Web Development company in Udaipur, known for our exceptional delivery of quality mobile applications to entrepreneurs, startups, and businesses that are feature-rich and visually appealing.',
+      ],
+      heading: 'WORK WITH US FOR:',
+      list: [
+        'User-Centric Designs that boost engagement.',
+        'Engaging Wireframing and Prototyping.',
+        'Uniform Design coherence across diverse Android Devices ',
+        
+      ],
+    },
+  },
+   {
+    title: 'MULTI-DEVICE ANDROID DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Our custom Android apps provide intelligent business solutions for clients across multiple industries. Go-Tech’s Android apps for smartphones, tablets, and Android TV help our partners carve out a niche using apps that are fully compatible with all devices and the latest Android operating systems and make a real impact in the online marketplace. ',
+      ],
+      heading: ' HARMONIZING THE USE OF ANDROID:',
+      list: [
+        'Crafting adaptable Apps for different screens & resolutions',
+        'Leveraging Android’s adaptability for diverse devices ',
+        'Maintaining Uniform UI/UX across Android devices',
+        'Improving performance on resource-limited devices',
+        'Seamless Incorporation of device-specific features & capabilities',
+      ],
+    },
+  },
+ {
+    title: 'TECHNICAL AUDIT & CONSULTATION',
+    content: {
+      paragraphs: [
+       ' Harnessing the expertise of our team in responsive Android app development. We meticulously ensure that the app is optimized and feature-rich while conducting thorough audits and consultations with the client.',
+      ],
+      heading: ' PARTNER WITH US FOR:',
+      list: [
+        'Technical issues & infrastructural flaws',
+        'Comprehensive reports with actionable suggestions',
+        'Optimizing Android solutions for efficient performance.',
+        
+      ],
+    },
+  },
+  {
+    title: 'THIRD PARTY INNTEGRATION',
+    content: {
+      paragraphs: [
+       ' We make sure to streamline your Android apps with external systems and data sources, elevated functionality, and user experience.',
+      ],
+      heading: '  JOIN HANDS WITH US FOR:',
+      list: [
+        'Smooth integration of payment processors, analytics, and more',
+        'Secure data exchange with third-party services. ',
+        'Feature-rich app & external functionality ',
+        
+      ],
+    },
+  },
+];
 
   return (
     <>
     
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={startupmvpData}/>
-     <RightSideTextDesc
-    heading="ANDROID SOLUTIONS TO INDUSTRY-SPECIFIC NEEDS"
-    subheading="Connecting technology with different industries through tailored Android applications for enhanced growth and innovation."
-   />
+
+
+       <SelectSidebar services={sidebarData} headingSidebar={"WEB DEVELOPMENT SOLUTIONS"}  />   
+
+
+
+     <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
+
+
+     
 
    <WhiteBgCard
     whitecards={whitecardsData}
     columns={3}
+     heading="ANDROID SOLUTIONS TO INDUSTRY-SPECIFIC NEEDS"
+    subheading="Connecting technology with different industries through tailored Android applications for enhanced growth and innovation."
+  
     />
     
     <GridBlueCard

@@ -4,6 +4,11 @@ import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueCard from '../../../../components/common/GridBlueCard'
 import CallToAction from '../../../../components/common/CallToAction'
 import GridBordBase from '../../../../components/common/GridBordBase'
+import { useState } from 'react'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import DeepLearnAiMl from '../../../../components/aiMl/DeepLearnAiMl'
+import MachineLearAiMl from '../../../../components/aiMl/MachineLearAiMl'
+import NlpAiMl from '../../../../components/aiMl/NlpAiMl'
 
 
 const AiMlDev = () => {
@@ -67,11 +72,40 @@ const AiMlDev = () => {
   },
   
 ];
+  const [stacklist, setstacklist] = useState([
+    {
+      title: "DEEP LEARNING",
+      element: <DeepLearnAiMl />,
+    },
+    {
+      title: "MACHINE LEARNING (ML)",
+      element: <MachineLearAiMl />,
+    },
+    {
+      title: "NATURAL LANGUAGE PROCESSING (NLP)",
+      element: <NlpAiMl />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
    <>
    <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={aiMlData} />
    
+  {/* TECH STACK */}
+      <TechStackSection
+        title="OUR EXPERTISE IN ML & AI TECHNOLOGIES"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
    <GridBordBase/>
    
    

@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import WhiteBgCard from '../../../../components/common/WhiteBgCard'
+import NetFramNet from '../../../../components/net/NetFramNet'
+import CloudFramNet from '../../../../components/net/CloudFramNet'
+import DatabaseNet from '../../../../components/net/DatabaseNet'
+import TechStackSection from '../../../../components/common/TechStackSection'
 const Net = () => {
       const stats = [
   { value: 10, label: ".NET specialists worldwide", suffix: "+" },
@@ -95,11 +99,40 @@ const Net = () => {
     ],
    },
 ];
+
+  const [stacklist] = useState([
+    {
+      title: ".NET FRAMEWORKS & LIBRARIES",
+      element: <NetFramNet />,
+    },
+    {
+      title: "CLOUD PLATFORMS & TOOLS",
+      element: <CloudFramNet />,
+    },
+    {
+      title: "DATABASES & STORAGE SOLUTIONS",
+      element: <DatabaseNet />,
+    },
+    
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
-    
+     {/* TECH STACK */}
+      <TechStackSection
+        title=".NET TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
     <WhiteBgCard
     whitecards={whitecardsData}
     columns={2}

@@ -1,7 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueBaseBord from '../../../../components/common/GridBlueBaseBord'
+import GeneralFramNode from '../../../../components/node/GeneralFramNode'
+import DatabaseManageNode from '../../../../components/node/DatabaseManageNode'
+import CloudServicesNode from '../../../../components/node/CloudServicesNode'
+import TechStackSection from '../../../../components/common/TechStackSection'
 
 const Node = () => {
     const stats = [
@@ -84,6 +88,28 @@ const blueBaseData = [
     description: 'Rely on our continuous and dependable support and maintenance services to ensure your Node.js applications remain updated and operate seamlessly over time.',
   },
 ]
+
+  const [stacklist] = useState([
+    {
+      title: "GENERAL-PURPOSE FRAMEWORKS",
+      element: <GeneralFramNode />,
+    },
+    {
+      title: "DATABASES & DATA MANAGEMENT",
+      element: <DatabaseManageNode />,
+    },
+    {
+      title: "CLOUD SERVICES",
+      element: <CloudServicesNode />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
     
@@ -92,6 +118,14 @@ const blueBaseData = [
     <GridBlueBaseBord  headings="NODE SOFTWARE DEVELOPMENT SERVICES"
     blueBaseData={blueBaseData}
     /> 
+     {/* TECH STACK */}
+      <TechStackSection
+        title="OUR EXPERTISE IN NODE.JS DEVELOPMENT"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
     </>
   )
 }

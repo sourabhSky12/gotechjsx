@@ -1,10 +1,16 @@
 import React from 'react'
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const BluePart = () => {
+  const { ref, inView } = useInView({
+      triggerOnce: true,
+      threshold: 0.3,
+    });
   return (
     <>
 
-    <div class="w-full mt-10 primebgcolor px-4 py-10  ">
+    <div  ref={ref} class="w-full mt-10 primebgcolor px-4 py-10 ">
   <div class="flex flex-col lg:flex-row gap-10 sm:px-40  ">
     
     
@@ -12,27 +18,69 @@ const BluePart = () => {
       <h1 class="text-2xl sm:text-3xl text-amber-50 mb-6 font-bold">ABOUT US</h1>
       <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 ">
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">200+</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400"> {inView && (
+                    <CountUp
+                      start={0}
+                      end={200}
+                      duration={2}
+                      
+                    />
+                  )}+</div>
           <p class="mt-2 text-sm sm:text-base">Successful projects</p>
         </div>
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">7</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400">{inView && (
+                    <CountUp
+                      start={0}
+                      end={7}
+                      duration={2}
+                      
+                    />
+                  )}</div>
           <p class="mt-2 text-sm sm:text-base">Out of 9 clients satisfied with Go InfoTech</p>
         </div>
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">4+</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400">{inView && (
+                    <CountUp
+                      start={0}
+                      end={4}
+                      duration={2}
+                      
+                    />
+                  )}+</div>
           <p class="mt-2 text-sm sm:text-base">Years in business</p>
         </div>
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">100+</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400">{inView && (
+                    <CountUp
+                      start={0}
+                      end={100}
+                      duration={2}
+                      
+                    />
+                  )}+</div>
           <p class="mt-2 text-sm sm:text-base">Qualified specialists worldwide</p>
         </div>
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">100+</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400">{inView && (
+                    <CountUp
+                      start={0}
+                      end={100}
+                      duration={2}
+                      
+                    />
+                  )}+</div>
           <p class="mt-2 text-sm sm:text-base">Qualified specialists worldwide</p>
         </div>
         <div class="p-6 rounded-xl bg-[#0E1C50] text-white shadow-md">
-          <div class="text-2xl sm:text-3xl font-bold text-orange-400">100+</div>
+          <div class="text-2xl sm:text-3xl font-bold text-orange-400">{inView && (
+                    <CountUp
+                      start={0}
+                      end={100}
+                      duration={2}
+                      
+                    />
+                  )}+</div>
           <p class="mt-2 text-sm sm:text-base">Qualified specialists worldwide</p>
         </div>
       </div>

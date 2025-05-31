@@ -1,8 +1,3 @@
-import React from 'react'
-
-
-
-
 
 import  { useState } from 'react';
 import IconTopCard from '../../../../components/common/IconTopCard'
@@ -10,16 +5,24 @@ import GridBlueCard from '../../../../components/common/GridBlueCard'
 import ServicesStartCount from '../../../../components/common/ServicesStartCount'
 import BoxBaseBord from '../../../../components/common/BoxBaseBord'
 import StatsSection from '../../../../components/common/StatsSection'
-import { DollarSign, Lightbulb, Lock } from 'lucide-react';
+import { DollarSign, Lightbulb, Lock, ImageIcon } from 'lucide-react';
 
 import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import CallToAction from '../../../../components/common/CallToAction'
 import ContactModal from '../../../../components/common/ContactModal'
 import CardGridHovBase from '../../../../components/common/CardGridHovBase';
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase';
+import MobileMvp from '../../../../components/startupMvp/MobileMvp';
+import FrontMvp from '../../../../components/startupMvp/FrontMvp';
+import BackMvp from '../../../../components/startupMvp/BackMvp';
+import BlockMvp from '../../../../components/startupMvp/BlockMvp';
+import TechStackSection from '../../../../components/common/TechStackSection';
+
 const StartupMvpDev = () => {
 
   
+ 
+   
   const [showModal, setShowModal] = useState(false);
   
  const stats = [
@@ -262,6 +265,31 @@ const methodologyData = [
       'We take pride in our team and their unwavering dedication to serving our clients and fulfilling their needs and preferences by making use of their expertise in iOS and Android development for a customized solution. We aim to fulfill all the requirements of our clients and aid them in turning their dreams into reality',
   },
 ];
+ const [stacklist] = useState([
+    {
+      title: "FRONT-END ",
+      element: <FrontMvp />,
+    },
+    {
+      title: "BACK-END",
+      element: <BackMvp />,
+    },
+    {
+      title: "MOBILE",
+      element: <MobileMvp />,
+    },
+    {
+      title: "BLOCK-CHAIN",
+      element: <BlockMvp  />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+  
 
   return (
    <>
@@ -296,6 +324,13 @@ const methodologyData = [
 
     <ServicesStartCount onClick={() => setShowModal(true)}/>
     <BoxBaseBord headsection="OUR APPROACH WHEN DEVELOPING A REMARKABLE STARTUP MVP APP" steps={roadmapData}    />
+    
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+      />
     
     <CallToAction
     

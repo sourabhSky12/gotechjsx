@@ -1,8 +1,11 @@
-import React from 'react'
+import { useState } from 'react';
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase';
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
+import TechStackSection from '../../../../components/common/TechStackSection';
+import FrameworkJava from '../../../../components/java/FrameworkJava';
+import DataManageJava from '../../../../components/java/DataManageJava';
 
 const Java = () => {
        const stats = [
@@ -83,10 +86,38 @@ const methodData=[
 
 ];
  
+  const [stacklist] = useState([
+    {
+      title: "JAVA FRAMEWORKS & LIBRARIES",
+      element: <FrameworkJava />,
+    },
+    {
+      title: "DATABASES & DATA MANAGEMENT",
+      element: <DataManageJava />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+
   return (
     <>
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
+
+     {/* TECH STACK */}
+      <TechStackSection
+        title="JAVA DEVELOPMENT TECH-STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
     <CardMethodologyBase
     heading="DIVERSE TECH CAPABILITIES"
         items={methodData}

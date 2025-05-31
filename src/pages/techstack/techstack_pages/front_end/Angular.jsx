@@ -1,10 +1,14 @@
-import React from 'react'
+
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueBaseBord from '../../../../components/common/GridBlueBaseBord'
 import CallToAction from '../../../../components/common/CallToAction'
 import { useState } from 'react'
 import ContactModal from '../../../../components/common/ContactModal'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import LibrariesAng from '../../../../components/angular/LibrariesAng'
+import StateManageAng from '../../../../components/angular/StateManageAng'
+import TestingAng from '../../../../components/angular/TestingAng'
 const Angular = () => {
 
    const [showModal, setShowModal] = useState(false);
@@ -89,7 +93,27 @@ const blueBaseData = [
     description: 'Experience continuous support and maintenance assistance from our experts with due diligence to make sure that your Angular application is updated and performing right.',
   },
 ]
+const [stacklist] = useState([
+    {
+      title: "COMPONENT LIBRARIES & FRAMEWORKS",
+      element: <LibrariesAng/>,
+    },
+    {
+      title: "STATE MANAGEMENT LIBRARIES",
+      element: <StateManageAng />,
+    },
+    {
+      title: "TESTING AND DEBUGGING TOOLS",
+      element: <TestingAng />,
+    },
+    
+  ]);
 
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
 
 
   return (
@@ -101,6 +125,18 @@ const blueBaseData = [
      headings="ANGULAR SOFTWARE DEVELOPMENT SERVICES"
     blueBaseData={blueBaseData}
     />
+   
+   {/* TECH STACK */}
+      <TechStackSection
+        title="OUR EXPERTISE IN ANGULAR DEVELOPMENT"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
+
+
    <CallToAction
     title="ARE YOU SET TO EMBARK YOUR JOURNEY WITH ANGULAR?"
     subtitle="Let Go InfoTech’s professionals assist you in unleashing the power of Angular to build scalable and effective web applications."

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import StatsSection from '../../../components/common/StatsSection'
 import IconTopCard from '../../../components/common/IconTopCard'
 import CallToAction from '../../../components/common/CallToAction'
@@ -8,6 +8,11 @@ import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import CardMethodologyBase from '../../../components/common/CardMethodologyBase'
 import { useState } from 'react'
 import WhiteBgCard from '../../../components/common/WhiteBgCard'
+import TechStackSection from '../../../components/common/TechStackSection'
+import FrontEnd from '../../../components/techstack/FrontEnd'
+import BackEnd from '../../../components/techstack/BackEnd'
+import UiUx from '../../../components/techstack/UiUx'
+import MobileApp from '../../../components/techstack/MobileApp'
 const Healthcare = () => {
    const [showModal, setShowModal] = useState(false);
     const stats = [
@@ -177,11 +182,45 @@ const methodologyData = [
       'Enhancing the pharmaceutical and biotech sectors with the professional assistance of specialists and optimizing user interaction while making use of predictive analysis.',
   },
 ];
+ const [stacklist] = useState([
+    {
+      title: "FRONT-END DEVELOPMENT",
+      element: <FrontEnd />,
+    },
+    {
+      title: "BACK-END DEVELOPMENT",
+      element: <BackEnd />,
+    },
+    {
+      title: "MOBILE APP DEVELOPMENT",
+      element: <MobileApp />,
+    },
+    {
+      title: "UI/UX DESIGN",
+      element: <UiUx />,
+    },
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
   return (
     <>
     
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER FOR DIGITAL SOLUTIONS'/>
+
+    {/* TECH STACK */}
+      <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
             <CallToAction
      title="ADVANTAGES OF PARTNERING WITH GO INFOTECH FOR FINTECH SOFTWARE DEVELOPMENT"
    

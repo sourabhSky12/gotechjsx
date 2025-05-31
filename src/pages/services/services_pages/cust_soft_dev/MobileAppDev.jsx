@@ -6,6 +6,11 @@ import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import { useState } from 'react'
 import ContactModal from '../../../../components/common/ContactModal'
 import CallToAction from '../../../../components/common/CallToAction'
+import IosMobile from '../../../../components/mobileAppDev/IosMobile'
+import AnderoidMobile from '../../../../components/mobileAppDev/AnderoidMobile'
+import CrossPLatMobile from '../../../../components/mobileAppDev/CrossPLatMobile'
+import TechStackSection from '../../../../components/common/TechStackSection'
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const MobileAppDev = () => {
 const [showModal, setShowModal] = useState(false);
 
@@ -156,6 +161,179 @@ const mobAppvData=[
   },
 
 ];
+ const [stacklist] = useState([
+    {
+      title: "IOS APP DEVELOPMENT",
+      element: <IosMobile />,
+    },
+    {
+      title: "ANDROID APP DEVELOPMENT",
+      element: <AnderoidMobile />,
+    },
+    {
+      title: "CROSS-PLATFORM APP DEVELOPMENT",
+      element: <CrossPLatMobile />,
+    },
+   
+  ]);
+
+  const [selectedStack, setSelectedStack] = useState(stacklist[0].element);
+
+  const handleStackClick = (stackl) => {
+    setSelectedStack(stackl.element);
+  };
+const sidebarData = [
+  {
+    title: 'TEAM AUGMENTATION FOR MOBILE PRODUCTS',
+    content: {
+      paragraphs: [
+        `At Go-Infotech Solution, the Best Development Company, we offer top-tier team augmentation services to boost your mobile product development. Our skilled professionals seamlessly integrate with your team, providing expertise in the latest mobile technologies. Whether you need developers, designers, testers, or project managers, we provide flexible solutions to meet your project demands. Focus on your core business while we handle recruitment, training, and management, ensuring your product is delivered on time and within budget. Enhance your team’s capabilities and accelerate your mobile projects with Go-Infotech Solution.`,
+      ],
+    
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'CROSS-PLATFORM APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'At Go-Infotech Solution, the Best Development Company, we specialize in cross-platform app development to ensure your app reaches the widest possible audience. Our expert team uses the latest technologies to create seamless and high-performing apps for both iOS and Android platforms. By leveraging a single codebase, we streamline the development process, reducing costs and time-to-market while maintaining top-notch quality and performance. Partner with Go-Infotech Solution to bring your app vision to life efficiently and effectively, ensuring a consistent user experience across all devices.',
+      ],
+      heading: 'PARTNER WITH Go InfoTech EXPERTISE FOR:',
+      list: [
+        'Optimized code reuse quickens time-to-market.',
+        'Improved scalability across platforms for applications. ',
+        'Cross-platform Solutions Maintenance & Support. ',
+        
+      ],
+    },
+  },
+   {
+    title: 'NATIVE MOBILE APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'The Best Software Development Company, Go-Infotech Solution, specializes in native mobile app development and builds powerful applications for the iOS and Android operating systems. Our committed development team makes the most of native technology to create apps that are faster, more useful, and offer a better user experience. Through the use of best practices and platform-specific functionality, we guarantee that your app stands out in the crowded market. Put your trust in Go-Infotech Solution to deliver unparalleled native mobile development quality and efficiency to realize your app vision.',
+      ],
+      heading: 'Select Go InfoTech for:',
+      list: [
+        'Features-rich Mobile App Development for iOS and Android;',
+        'Scalable, Interactive & High-performing Mobile Apps; ',
+        'Platform Specific & Custom UX/UI Design.',
+       
+      ],
+    },
+  },
+   {
+    title: 'CONSULTING AND PROTOTYPING',
+    content: {
+      paragraphs: [
+        'The IT Company, Go-Infotech Solution, provides thorough consulting and prototyping services to assist you in honing your concepts and realizing your vision. To guarantee that your project is in line with market trends and industry best practices, our knowledgeable consultants offer strategic advice. We build interactive models of your application with our prototype services so you can see and test your ideas before moving forward with full-scale development. Join together with Go-Infotech Solution to reduce risks, maximize the potential of your product, and quicken the process of taking your idea from paper to market.',
+      ],
+      heading: 'CONNECT WITH GO INFOTECH FOR:',
+      list: [
+        'Proper Consultation & guidance for mobile app',
+        'Seamless Prototyping of Your Ideas',
+        'Regular updates with feedback & product-market fit.',
+        
+      ],
+    },
+  },
+  
+];
+const sidebarbgData =[
+    {
+    title: 'STAFF AUGMENTATION ',
+    content: {
+      paragraphs: [
+        `Go Tech Solution is a custom Software Development Company in Udaipur aiming to provide seamless project execution by staff augmentation for optimal resource management`,
+      ],
+      
+       sections: [
+        {
+          heading: 'IT STAFF AUGMENTATION',
+          paragraphs: [
+            'We are dedicated to providing you with highly skilled and experienced IT professionals who will help you focus on core aspects so that your business reaches new heights.'
+          ]
+        },
+      
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+   
+   {
+    title: 'IT CONSULTING ',
+    content: {
+      paragraphs: [
+        'Our IT Company in Udaipur is here to navigate you in the evolving tapestry of Technology while providing appropriate guidance from highly qualified professionals:',
+      ],
+       sections: [
+        {
+          heading: 'TECHNICAL DUE DILIGENCE',
+          paragraphs: [
+            'After conducting a thorough evaluation of your business while assessing the project feasibility, relevant risks, and growth ambition of your project, our team provides strategic insights for your project growth.'
+          ]
+        },
+        {
+          heading: 'PROJECT MANAGEMENT AND COORDINATION',
+          paragraphs: [
+          ' Our team ensures that your project delivery is timely and effective through proper management and streamlined communication with the development teams.'
+          ]
+        
+        },
+      ],
+     
+    },
+  },
+   {
+    title: 'CUSTOM SOFTWARE DEVELOPMENT',
+      content: {
+      paragraphs: [
+        'Our team is committed to delivering unique software solutions to your specific business requirements. Our end-to-end development service results in high-performance outcomes that are structured to your business needs.',
+      ],
+       sections: [
+        {
+          heading: 'WEB DEVELOPMENT',
+          paragraphs: [
+            'Aim to develop a user-centric web application that is adaptive, intuitive, visually engaging, and designed to meet the unique needs of your business.'
+          ]
+        },
+        {
+          heading: 'MOBILE DEVELOPMENT',
+          paragraphs: [
+          'Crafting a mobile application that is user-friendly, visually appealing, and can be used on Android and iOS platforms to stay updated with the evolving tech.'
+          ]
+        
+        },
+      ],
+     
+    },
+  },
+   {
+    title: 'INTELLIGENT AUTOMATION',
+    content: {
+      paragraphs: [
+        'We are dedicated to serving you with the best services incorporating state-of-the-art technologies like AI, machine learning, blockchain, and IoT, while we transform your business to achieve new heights.',
+      ],
+       sections: [
+        {
+          heading: 'AI & ML SOLUTIONS:',
+          paragraphs: [
+            'Empower your business to grow by incorporating Artificial Intelligence and Machine Learning to enhance the decision making process and robust growth of business.'
+          ]
+        },
+        {
+          heading: 'BLOCKCHAIN SOLUTIONS:',
+          paragraphs: [
+          'Secure and transparent blockchain solutions tailored to your unique needs and industry requirements, ranging from cryptocurrencies to decentralized applications (DApps).'
+          ]
+        
+        },
+      ],
+     
+    },
+  },
+  ];
 
   return (
    <>
@@ -163,6 +341,15 @@ const mobAppvData=[
    <IconTopCard
    servicesData={mobileAppData}
    />
+
+
+
+<SelectSidebar services={sidebarData} headingSidebar={"OUR MOBILE SERVICES:"}  />   
+
+
+
+
+
      <CallToAction
     
     title="INDUSTRIES GO INFOTECH SOLUTION SERVES:"
@@ -186,6 +373,27 @@ const mobAppvData=[
      columns={2} 
  
  />   
+   <TechStackSection
+        title="TECH STACK"
+        stackList={stacklist}
+        selectedStack={selectedStack}
+        onStackClick={handleStackClick}
+        
+      />
+
+
+   <SelectSidebar 
+   services={sidebarbgData}
+    headingSidebar={"OUR MACHINE LEARNING SERVICES"} 
+     sectbgcolor="bg-[#314B8C]"
+     headtextcolor= "text-white"
+     dynamicontetext='text-white'
+       selectedClass = 'bg-white text-[#314B8C] '
+       unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+    />  
+
+
+
    </>
   )
 }
