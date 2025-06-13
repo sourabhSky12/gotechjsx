@@ -9,10 +9,11 @@ import ContactModal from "../../../components/common/ContactModal";
 import WhiteBgCard from "../../../components/common/WhiteBgCard";
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import CardMethodologyBase from "../../../components/common/CardMethodologyBase";
-import FrontEnd from "../../../components/techstack/FrontEnd";
-import BackEnd from "../../../components/techstack/BackEnd";
-import MobileApp from "../../../components/techstack/MobileApp";
-import UiUx from "../../../components/techstack/UiUx";
+import FrontEnd from "../../../components/fintech/FrontEnd";
+import BackEnd from "../../../components/fintech/BackEnd";
+import MobileApp from "../../../components/fintech/MobileApp";
+import UiUx from "../../../components/fintech/UiUx";
+import SelectSidebar from "../../../components/common/sidebarselect/SelectSidebar";
 const Fintech = () => {
   const [showModal, setShowModal] = useState(false);
   const stats = [
@@ -207,11 +208,116 @@ const methodologyData = [
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+  const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR FINTECH PRODUCTS',
+    content: {
+      paragraphs: [
+        `Add the expertise of Go InfoTech Solution to your existing team, and make sure you augment it with highly specialized and experienced professionals from the most trusted Custom Software Development Company in Udaipur.`,
+      ],
+     
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'GO FINANCE APPLICATION',
+    content: {
+      paragraphs: [
+        'Go Finance Software is a comprehensive solution designed to revolutionize operations within the finance industry.',
+      ],
+      sections: [
+        {
+          heading: 'OFFERING FUNCTIONALITIES:',
+          
+        },
+      ],
+      list: [
+        'Customized alerts and daily pop-ups',
+        'Account administration',
+        'E-commerce and digital transactions',
+        
+      ],
+    },
+  },
+   {
+    title: 'RISK MANAGEMENT SOFTWARE SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Incorporate meticulously planned risk assessment and risk management software solutions to help you mitigate the risk.',
+      ],
+      sections:[{ heading: ' FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Forecasting analysis',
+        'On-the-fly surveillance ',
+        'Adherence to regulatory compliance.',
+        
+      ],
+    },
+  },
+   {
+    title: 'DIGITAL WALLET SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Develop digital wallet solutions that are safe and ease the transaction process while elevating the user experience.FUNCTIONALITIES INCLUDE:',
+      ],
+     
+      list: [
+        'Several payment options',
+        'Confidential ciphering',
+        'Transaction Surveillance',
+        'Long-term Customer Loyalty Development',
+      ],
+    },
+  },
+   {
+    title: 'AI DRIVEN TRADING PLATFORM DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Utilize the advanced capabilities of artificial intelligence to elevate your trading platforms.',
+      ],
+      sections:[{ heading: 'WE PROVIDE USERS WITH:'}],
+      list: [
+        'Forecasting insights;',
+        'Instant data analysis; ',
+        'Automated trading; ',
+        'Customized investment plans.',
+      ],
+    },
+  },
+  {
+    title: 'BLOCKCHAIN SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Indulge with the Custom Software Development Company in Udaipur and unleash the power of blockchain technology with Go InfoTech, offering security and transparency.',
+      ],
+     sections:[{ heading: 'WE OFFER SERVICES:'}],
+      list: [
+        'Personalized Customer Interactions Interface',
+        'Developing decentralized applications (DApps);',
+        'Secure online transactions',
+        'smart contracts implementation',
+      ],
+    },
+  },
+
+];
   return (
     <>
-      <div>
+      <div className="px-3 sm:px-0">
         <StatsSection stats={stats} content={content} />
         <IconTopCard servicesData={iconTopCardData} heading="WHY CHOOSE GO INFOTECH AS YOUR PARTNER" />
+
+        <SelectSidebar 
+           services={sidebarData}
+            headingSidebar={"OUR MACHINE LEARNING SERVICES"} 
+             sectbgcolor="bg-[#314B8C]"
+             headtextcolor= "text-white"
+             dynamicontetext= "text-white"
+               textList = "text-[#f6ae39]"
+               selectedClass = 'bg-white text-[#314B8C] '
+               unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+            />  
+        
 
         {/* TECH STACK */}
       <TechStackSection

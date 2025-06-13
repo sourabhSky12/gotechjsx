@@ -12,15 +12,13 @@ const FrameworkJava = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Apache Maven", image: "/maven-1.png" },
+    { name: "Apache Struts", image: "/Apache-Struts.png" },
+    { name: "Hibernate", image: "/Hibernate-1.png" },
+    { name: "JUnit", image: "/junit-1.png" },
+    { name: "Kotlin", image: "/Kotlin-1.png" },
+    { name: "Spring Framework", image: "/Spring-Framework-1.jpg" },
+   
   ];
 
   return (

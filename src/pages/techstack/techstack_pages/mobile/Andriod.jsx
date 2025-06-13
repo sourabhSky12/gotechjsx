@@ -6,6 +6,7 @@ import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import RightSideTextDesc from '../../../../components/common/RightSideTextDesc'
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const Andriod = () => {
     const stats = [
    { value: 30, label: "mobile development specialists", suffix: "+" },
@@ -171,12 +172,136 @@ const methodData=[
   },
 
 ];
+const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR ANDROID PRODUCTS',
+    content: {
+      paragraphs: [
+        `Enhance your team’s potential with our experienced Android developers. Whether you aim to expedite your project, bridge skill disparities, or expand your development endeavors, we offer seasoned professionals customized to your requirements.`,
+      ],
+      sections:[{heading: '  REASONS TO COLLABORATE WITH US:'},],
+      
+      list: [
+        'Gain access to a proficient pool of Android developers.',
+        'Choose from flexible engagement models adaptable to your project’s size and intricacy.',
+        'Seamlessly integrate with your current team and workflows.',
+        'Avail cost-efficient solutions aligned with your development objectives.',
+        'Benefit from expertise in cutting-edge Android technologies and industry standards.',
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'ANDROID NATIVE APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Our expertise lies in developing high-performance Android native applications customized to your unique requirements, maximizing the capabilities offered by the Android platform.',
+      ],
+      sections:[{
+      heading: 'WHY COLLABORATE WITH US:',
+      },],
+      list: [
+        'Streamlined and seamless native Android applications.',
+        'Utilization of Android-specific features and functionalities to enhance user experience. ',
+        'Compatibility ensured across an extensive array of Android devices.',
+        
+      ],
+    },
+  },
+   {
+    title: 'HYBRID APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We excel in crafting hybrid applications that amalgamate the strengths of both native and web solutions, employing standard web technologies encapsulated within a native app shell.',
+      ],
+      sections:[{
+      heading: 'WHY PARTNER WITH US:',
+      },],
+      list: [
+        'Ensure uniformity across various platforms with consistent applications.',
+        'Expedite development cycles by leveraging a single codebase.',
+        'Attain cost-effective solutions while maintaining performance akin to native applications.',
+       
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+   {
+    title: 'MOBILE APP UI/UX DESIGN',
+    content: {
+      paragraphs: [
+        'Our emphasis lies in crafting intuitive mobile app designs that elevate user experience by seamlessly blending creativity with platform-specific design principles.',
+      ],
+      sections:[{
+      heading: 'REASONS TO COLLABORATE WITH US:',
+      },],
+      list: [
+        'User-centric designs aimed at enhancing user engagement and satisfaction.',
+        'Interactive wireframing and prototyping to visualize and refine design concepts.',
+        'Ensured design consistency across diverse Android devices, ensuring a cohesive user experience.',
+        
+      ],
+    },
+  },
+   {
+    title: 'MULTI-DEVICE ANDROID DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We specialize in developing versatile Android applications optimized for a wide range of devices, including smartphones, tablets, wearables, and TVs, ensuring a uniform and superior user experience across all Android platforms.',
+      ],
+      sections:[{
+      heading: ' EMBRACING THE ANDROID ECOSYSTEM:',
+      },],
+      list: [
+        'Crafting responsive applications that seamlessly adapt to various screen sizes and resolutions.',
+        'Leveraging Android’s flexibility to cater to the diverse landscape of devices.',
+        'Ensuring a consistent UI/UX design across all Android devices, enhancing user interaction.',
+        'Optimizing performance to deliver smooth operation even on resource-constrained devices.',
+        'Integrating seamlessly with device-specific features and capabilities to enhance functionality.',
+      ],
+    },
+  },
+ {
+    title: 'TECHNICAL AUDIT & CONSULTATION',
+    content: {
+      paragraphs: [
+       ' Benefit from our wealth of experience in Android app development. We provide consulting services on industry best practices, security measures, and performance optimization strategies.',
+      ],
+      sections:[{
+      heading: ' PARTNER WITH US TO GAIN:',
+      },],
+      list: [
+        'In-depth analysis of technical issues and architectural weaknesses.',
+        'Comprehensive reports containing actionable recommendations for improvement.',
+        'Refinement of your Android solution to achieve optimal performance and functionality.',
+        
+      ],
+    },
+  },
+  {
+    title: 'THIRD PARTY INNTEGRATION',
+    content: {
+      paragraphs: [
+       'Partner with us to ensure the seamless integration of your Android applications with external systems and data sources, thereby enhancing functionality and user experience.',
+      ],
+      sections:[{
+      heading: ' BENEFITS OF COLLABORATING WITH US:',
+      },],
+      list: [
+        'Smooth integration with payment processors, analytics services, and other third-party platforms.',
+        'Secure data exchange between your app and external services, prioritizing user privacy.',
+        'Enhancement of app features through the integration of external functionalities, expanding the app’s capabilities and appeal.',
+        
+      ],
+    },
+  },
+];
   return (
     <>
-    
+     <div className='px-3 sm:px-0' >
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={icontopData}/>
-    
+     <SelectSidebar services={sidebarData} headingSidebar={"OUR SERVICES"}  />   
     <WhiteBgCard 
      whitecards={whitecardsData}
     columns={3}
@@ -204,7 +329,7 @@ const methodData=[
        
     />
     
-    
+    </div>
     </>
   )
 }

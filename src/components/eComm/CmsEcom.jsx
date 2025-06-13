@@ -1,6 +1,7 @@
 import React from 'react'
+import TechStackContent from '../common/TechStackContent'
 
-const CmsEComm = () => {
+const CmsEcom = () => {
   const title = "CMS FRAMEWORKS";
   const description = "We have expertise in CMS frameworks, allowing us to construct websites that efficiently handle and structure extensive content. Whether you require a blog, news site, or e-commerce platform, we’re equipped to assist you with our proficiency in Drupal, WordPress, and Joomla.";
   
@@ -8,13 +9,13 @@ const CmsEComm = () => {
     "Development of CMS websites",
     "Customization and enhancement of CMS",
     "Development of themes and plugins",
-    "Maintenance and support",
+    "Maintenance and support"
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Drupal", image: "/drupal-icon.png" },
+    { name: "Joomla", image: "/joomla.jpg" },
+    { name: "Wordpress", image: "/wordpress.png" }
   ];
 
   return (
@@ -27,4 +28,4 @@ const CmsEComm = () => {
   );
 }
 
-export default CmsEComm
+export default CmsEcom

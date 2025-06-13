@@ -11,11 +11,11 @@ const MobileMvp = () => {
   ];
 
   const technologies = [
-    { name: "Flutter", image: "Angular-icon.png" },
-    { name: "Ionic", image: "Ionic-1.png" },
-    { name: "Kotlin", image: "Kotlin-1.png" },
-    { name: "React Native", image: "React-Native-1.png" },
-    { name: "Swift", image: "Swift-1.png" }
+    { name: "Flutter", image: "/Flutter-1.png" },
+    { name: "Ionic", image: "/Ionic-1.png" },
+    { name: "Kotlin", image: "/Kotlin-1.png" },
+    { name: "React Native", image: "/React-Native-1.png" },
+    { name: "Swift", image: "/Swift-1.png" }
   ];
   return (
    <>

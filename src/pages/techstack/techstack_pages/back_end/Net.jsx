@@ -6,6 +6,7 @@ import NetFramNet from '../../../../components/net/NetFramNet'
 import CloudFramNet from '../../../../components/net/CloudFramNet'
 import DatabaseNet from '../../../../components/net/DatabaseNet'
 import TechStackSection from '../../../../components/common/TechStackSection'
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const Net = () => {
       const stats = [
   { value: 10, label: ".NET specialists worldwide", suffix: "+" },
@@ -121,10 +122,106 @@ const Net = () => {
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+    const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION',
+    content: {
+      paragraphs: [
+        `Augment with the expertise of Go InfoTech’s .NET professionals that will enhance your `,
+        'Expand your team’s capabilities with our skilled .NET professionals, enhancing your project’s development capacity and expertise.'
+      ],
+      sections:[{ heading: 'HOW WE CAN ASSIST YOU:'}],
+      list: [
+        'Offering skilled .NET developers for projects of varying duration;',
+        'Helping fill skill gaps within your team;',
+        'Providing flexible staffing solutions tailored to your project needs.',
+       
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'CUSTOM .NET APPLICATION DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'We have expertise in .NET application development, offering scalable, secure, and responsive solutions that are crafted to the unique needs of your business.',
+      ],
+      sections:[{ heading: 'HOW WE CAN ASSIST YOU:'}],
+      list: [
+        'Developing web and desktop applications for enterprise-level usage;',
+        'Incorporating advanced features and contemporary UI/UX designs;',
+        'Ensuring high performance and adherence to industry standards.',
+       
+        
+      ],
+    },
+  },
+   {
+    title: '.NET CLOUD DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Offering a delivering scalable, dependable, and inclusive solutions by employing .NET for cloud-native application development.',
+      ],
+      sections:[{ heading: 'HOW WE CAN ASSIST YOU:'}],
+      list: [
+        'Designing cloud-native applications leveraging .NET; ',
+        'Transitioning .NET applications to cloud platforms such as Azure;',
+        'Leveraging cloud services to optimize application performance.',
+        
+        
+      ],
+    },
+  },
+   {
+    title: '.NET INTEGRATION SOLUTIONS',
+    content: {
+      paragraphs: [
+        'We specialize in integrating your .NET applications with diverse third-party services and systems.',
+      ],
+      sections:[{ heading: 'HOW WE CAN ASSIST YOU:'}],
+      list: [
+        'API, database, and cloud service linkage ',
+        'Smooth data flow between .NET applications and external systems',
+        'Augment application functionality through external service integration',
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+   {
+    title: '.NET MAINTENANCE AND SUPPORT',
+    content: {
+      paragraphs: [
+        'We offer continuous maintenance and support services for .NET applications, guaranteeing their currency, security, and efficiency.',
+      ],
+      sections:[{ heading: 'HOW WE CAN ASSIST YOU:'}],
+      list: [
+        'Regular updates and improvements',
+        'Identifying and resolving issues',
+        'Performing performance evaluations and optimizations',
+       
+      ],
+    },
+  },
+  
+
+];
   return (
     <>
+     <div className='px-3 sm:px-0' >
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
+      <SelectSidebar 
+                           services={sidebarData}
+                            headingSidebar={"OUR SERVICES"} 
+                             sectbgcolor="bg-[#314B8C]"
+                             headtextcolor= "text-white"
+                             dynamicontetext= "text-white"
+                               textList = "text-[#f6ae39]"
+                               selectedClass = 'bg-white text-[#314B8C] '
+                               unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                            />  
      {/* TECH STACK */}
       <TechStackSection
         title=".NET TECH STACK"
@@ -137,6 +234,7 @@ const Net = () => {
     whitecards={whitecardsData}
     columns={2}
     />
+    </div>
     </>
   )
 }

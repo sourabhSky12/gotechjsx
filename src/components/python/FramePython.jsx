@@ -12,15 +12,13 @@ const FramePython = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Django", image: "/django.png" },
+    { name: "FastAPI", image: "/fastapi.png" },
+    { name: "Flask", image: "/flask.png" },
+    { name: "Keras", image: "/Keras_logo-2.png" },
+    { name: "PyTorch", image: "/PyTorch-2.png" },
+    { name: "TensorFlow", image: "/Tensorflow-1.png" },
+   
   ];
 
   return (

@@ -12,9 +12,9 @@ const AnderoidMobile = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Java", image: "/Java-1.png" },
+    { name: "Kotlin", image: "/Kotlin-1.png" },
+    
   ];
 
   return (

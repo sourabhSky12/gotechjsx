@@ -41,6 +41,10 @@ const servicesSubmenu = [
         path: "/services/searchengineoptimization",
       },
       {
+        label: "Machine Learning Consulting",
+        path: "/services/machinelearn",
+      },
+      {
         label: "PPC",
         path: "/services/ppc",
       },
@@ -61,7 +65,7 @@ const servicesSubmenu = [
     submenu: [
       {
         label: "Cloud & DevOps Services",
-        path: "/cloud-devops-services",
+        path: "/services/clouddevopsserv",
       },
     ],
   },
@@ -272,28 +276,32 @@ const navItems = [
     path: "/services",
     submenu: servicesSubmenu,
     subInfo: <SerInfo />,
-    col:'columns-3'
+    col:'columns-3',
+    headAll: <Link to="/services" >ALL SERVICES →</Link>,
   },
   {
     label: "INDUSTRIES",
     path: "/industries",
     submenu: industriesSubmenu,
     subInfo: <IndInfo />,
-    col:'columns-2'
+    col:'columns-2',
+    headAll: <Link to="/industries" >ALL INDUSTRIES →</Link>,
   },
   {
     label: "TECH STACK",
     path: "/tech-stack",
     submenu: techstackSubmenu,
     subInfo: <TecInfo />,
-    col:'columns-3'
+    col:'columns-3',
+    headAll: <Link to="/tech-stack" >ALL TECHNOLOGIES →</Link>,
   },
   {
     label: "COMPANY",
     path: "/company",
     submenu: companySubmenu,
     subInfo: <ComInfo />,
-    col:'columns-1'
+    col:'columns-1',
+   
   },
   { label: "PROJECTS", path: "/projects" },
 ];
@@ -310,8 +318,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-white text-[#405EA9] shadow-md w-full">
-      <div className="max-w-7xl m-auto px-4 sm:px-6 lg:px-0 flex items-center justify-between h-16">
+    <header className="bg-white text-[#405EA9] shadow-md w-full sticky top-0 z-50">
+      <div className="max-w-7xl m-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-16">
         {/* Logo */}
 
         <Link to="/">
@@ -390,48 +398,48 @@ export default function Navbar() {
                   
                 </nav> */}
 
-        <nav className="hidden md:flex space-x-6 relative items-center">
-          {navItems.map(({ label, path, submenu, subInfo, col }) => (
+        <nav className="hidden  md:flex space-x-6  relative    items-center">
+          {navItems.map(({ label, path, submenu, subInfo, col ,headAll }) => (
             <div key={label} className="group relative">
               <Link to={path} className="transition-colors px-3 font-semibold">
                 {label}
               </Link>
 
               {submenu && (
-                <div className="absolute left-0 sm:flex sm:max-h-screen sm:max-w-screen bg-white text-[#405EA9] rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
+                <div className="absolute  left-50%  sm:flex sm:max-h-screen sm:w-fit bg-white text-[#405EA9] rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
                   <div className="w-70 sm:max-h-screen flex items-center justify-center sm:min-h-60 bg-gray-50">
                     {subInfo}
                   </div>
-                  <div className="w-100  sm:max-h-screen sm:min-h-60 ">
-                    <ul className={`py-5 ${col} gap-6 bg-white sm:max-h-screen sm:min-h-60 block items-center`}>
+                  <div className="  py-6  px-10 text-start items-center content-center ">
+                    <ul className={` ${col} gap-6 bg-white  block items-center`}>
                       {submenu.map((item) => (
-                        <li key={item.label} className="justify-center py-4 ">
+                        <li key={item.label} className="justify-center py-2 ">
                           {item.path ? (
                             <Link
                               to={item.path}
-                              className="block px-4 py-2 text-base font-semibold text-[#405EA9] "
+                              className="block   text-base font-semibold text-[#405EA9] "
                             >
                               {item.label}
                             </Link>
                           ) : (
-                            <span className="block px-4 py-2 text-base font-semibold text-gray-500 cursor-default ">
+                            <span className="block   text-base font-semibold text-gray-500 cursor-default ">
                               {item.label}
                             </span>
                           )}
 
                           {item.submenu && (
-                            <ul className="pl-4">
+                            <ul className="py-2">
                               {item.submenu.map((subItem) => (
-                                <li key={subItem.label}>
+                                <li key={subItem.label} className="py-2">
                                   {subItem.path ? (
                                     <Link
                                       to={subItem.path}
-                                      className="block px-4 py-1 text-sm text-[#405EA9] hover:text-amber-300 font-semibold"
+                                      className="block   text-sm text-[#405EA9] hover:text-amber-300 font-semibold"
                                     >
                                       {subItem.label}
                                     </Link>
                                   ) : (
-                                    <span className="block px-4 py-1 text-sm text-gray-700 cursor-default">
+                                    <span className="block   text-sm text-gray-700 cursor-default">
                                       {subItem.label}
                                     </span>
                                   )}
@@ -442,6 +450,11 @@ export default function Navbar() {
                         </li>
                       ))}
                     </ul>
+                     {headAll && (
+              <div className="px-6 pb-4 text-lg text-center font-bold text-[#405EA9] hover:text-amber-300">
+                {headAll}
+              </div>
+            )}
                   </div>
                 </div>
               )}
@@ -452,13 +465,14 @@ export default function Navbar() {
         <div>
           <button
             onClick={() => setShowModal(true)}
-            className="ml-4 bg-[#284181] hover:bg-blue-500 text-white font-bold py-2 px-4 rounded invisible sm:visible "
+            className="ml-4 bg-[#284181] hover:bg-blue-500 text-white font-bold py-3 px-4 rounded invisible sm:visible "
           >
             BOOK A CALL
           </button>
         </div>
 
         {/* Mobile Hamburger Button */}
+        
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden focus:outline-none"

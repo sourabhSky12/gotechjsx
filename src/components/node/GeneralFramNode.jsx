@@ -13,15 +13,15 @@ const GeneralFramNode = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Express.JS", image: "/express-js-1.png" },
+    { name: "Feathers.js", image: "/feathersjs.png" },
+    { name: "Hapi.js", image: "/hapijs.png" },
+    { name: "Koa.js", image: "/koajs.png" },
+    { name: "Loopback", image: "/loopback.png" },
+    { name: "Meteor.js", image: "/meteor.png" },
+    { name: "Nest.js", image: "/NestJS.png" },
+    { name: "Sails.js", image: "/sails.png" },
+    { name: "Strapi", image: "/strapi.png" },
   ];
 
   return (

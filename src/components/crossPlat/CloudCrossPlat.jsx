@@ -11,9 +11,9 @@ const CloudCrossPlat = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Angular", image: "/Angular-icon.png" },
+    { name: "React.JS", image: "/React-JS.png" },
+    { name: "Vue", image: "/Vue.png" }
   ];
 
   return (

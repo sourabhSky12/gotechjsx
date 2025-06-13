@@ -11,15 +11,13 @@ const TestingAng = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Cypress", image: "/cypress-2.png" },
+    { name: "Jasmine", image: "/jasmine-1.png" },
+    { name: "Jest", image: "/jest-1.png" },
+    { name: "Karma", image: "/karma.png" },
+    { name: "Mocha", image: "/Mocha_logo-1.png" },
+    { name: "Protactor", image: "/protactor-1.png" },
+    
   ];
 
   return (

@@ -9,11 +9,11 @@ import TechStackSection from '../../../components/common/TechStackSection'
 import CardMethodologyBase from '../../../components/common/CardMethodologyBase'
 import WhiteBgCard from '../../../components/common/WhiteBgCard'
 import ContactModal from '../../../components/common/ContactModal'
-import CmsEComm from '../../../components/eComm/CmsEComm'
+import CmsEcomm from '../../../components/eComm/CmsEcom'
 import { BackEComm } from '../../../components/eComm/BackEComm'
 import FrontEComm from '../../../components/eComm/FrontEComm'
 import UiUxEComm from '../../../components/eComm/UiUxEComm'
-
+import SelectSidebar from '../../../components/common/sidebarselect/SelectSidebar'
 
 const Ecomm = () => {
   const [showModal, setShowModal] = useState(false);
@@ -195,7 +195,7 @@ const methodologyData = [
     },
     {
       title: "CMS FRAMEWORKS",
-      element: <CmsEComm />,
+      element: <CmsEcomm />,
     },
     {
       title: "UI/UX DESIGN",
@@ -208,12 +208,126 @@ const methodologyData = [
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+    const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR E-COMMERCE IT PRODUCTS',
+    content: {
+      paragraphs: [
+        `Add the expertise of Go InfoTech Solution to your existing team, and make sure you augment it with highly specialized and experienced professionals from the most trusted Custom Software Development Company in Udaipur.`,
+      ],
+     
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'E-COMMERCE PLATFORM',
+    content: {
+      paragraphs: [
+        'At Go InfoTech, we offer comprehensive e-commerce software solutions for businesses that are designed to revolutionize operations within the industry.',
+      ],
+      sections:[{ heading: 'OFFERING FUNCTIONALITIES:'}],
+      list: [
+        'Shopping-cart functionality and administration',
+        'Easy-to-use interfaces',
+        'Pricing policies ',
+       
+        
+      ],
+    },
+  },
+   {
+    title: 'E-COMMERCE MOBILE APPLICATIONS',
+    content: {
+      paragraphs: [
+        'Incorporate meticulously planned, AI-driven software solutions for the e-commerce industry, which include predictive analysis and user-generated data analysis.',
+      ],
+      sections:[{ heading: ' FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'payment processing integrations and platform ',
+        'Drive sales using personalized notifications and pop-ups',
+        'Design unique user experience using VR',
+        
+        
+      ],
+    },
+  },
+   {
+    title: 'CMS DEVELOPMEENT FOR E-COMMERCE PLATFORMS',
+    content: {
+      paragraphs: [
+        'Develop CMS for e-commerce platforms while utilizing innovation and cutting-edge technology for an enhanced user experience. We offer a scalable platform that is user-friendly, interactive, and responsive to the needs of the user. ',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES OF OUR E-COMMERCE SOLUTIONS:'}],
+      list: [
+        'Develop e-commerce websites that are responsive to several CMS platforms',
+        'Payment processing integrations, inventory administration, CRM systems',
+        'Interactive interfaces for an elevate user’s shopping experience',
+        
+      ],
+    },
+  },
+   {
+    title: 'SUPPLY CHHAIN MANAGEMENT SOFTWARE',
+    content: {
+      paragraphs: [
+        'Swift and effective supply chain management software solutions.',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Implementation of real-time order tracking',
+        'Inventory administration ',
+        'Managed logistic operations ',
+       
+      ],
+    },
+  },
+  {
+    title: 'CRM SYSTEMS',
+    content: {
+      paragraphs: [
+        'We offer seamless custom CRM solutions with our management software.',
+      ],
+     sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Deeper customer analytics',
+        'Individualized marketing campaigns',
+        'Effective customer service administration',
+        
+      ],
+    },
+  },
+ {
+    title: 'ONLINE MARKETPLACES',
+    content: {
+      paragraphs: [
+        'Empower your e-commerce operations with the online marketplace.',
+      ],
+     sections:[{ heading: 'FUNCTIONALITIES OF OUR E-COMMERCE SOLUTIONS:'}],
+      list: [
+        'Implementation of real-time order tracking',
+        'Inventory administration',
+        'Managed logistic operations ',
+        
+      ],
+    },
+  },
+];
   return (
     <>
-    
+    <div className='px-3 sm:px-0' >
     
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
+     <SelectSidebar 
+                           services={sidebarData}
+                            headingSidebar={"PARTNER WITH GO INFOTECH FOR THE SUCCESS OF YOUR E-COMMERCE BIZ"} 
+                             sectbgcolor="bg-[#314B8C]"
+                             headtextcolor= "text-white"
+                             dynamicontetext= "text-white"
+                               textList = "text-[#f6ae39]"
+                               selectedClass = 'bg-white text-[#314B8C] '
+                               unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                            />  
 
     {/* TECH STACK */}
       <TechStackSection
@@ -252,7 +366,7 @@ const methodologyData = [
   />
        
     
-    
+    </div>
     </>
   )
 }

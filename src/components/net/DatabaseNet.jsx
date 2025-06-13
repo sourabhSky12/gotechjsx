@@ -11,15 +11,15 @@ const DatabaseNet = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+   { name: "Figma", image: "/Figma-1.png" },
+    { name: "Adobe XD", image: "/Adobe_XD-1.png" },
+    { name: "Sketch", image: "/Sketch-1.png" },
+    { name: "InVision", image: "/Invision-1.png" },
+    { name: "Zeplin", image: "/Zeplin-1.png" },
+    { name: "FigJam", image: "/FigJam-1.png" },
+    { name: "Miro", image: "/Miro-1.png" },
+    { name: "Maze", image: "/Maze-1.png" },
+    { name: "Protopie", image: "/Protopie-1.png" }
   ];
 
   return (

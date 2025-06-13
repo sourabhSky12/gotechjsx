@@ -11,15 +11,13 @@ const CloudFramNet = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "AWS", image: "/aws-1.png" },
+    { name: "DigitalOcean", image: "/digitalocean.png" },
+    { name: "Docker", image: "/docker.png" },
+    { name: "Google Cloud", image: "/googleCloud.png" },
+    { name: "Kubernetes", image: "/Kubernetes.png" },
+    { name: "Microsoft Azure", image: "/Microsoft_Azure.png" },
+   
   ];
 
   return (

@@ -278,7 +278,7 @@ const sidebarData = [
 
   return (
     <>
-    
+    <div className='px-2 sm:px-0'>
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={startupmvpData}/>
     <CardGridHovBase
@@ -307,6 +307,10 @@ const sidebarData = [
         onStackClick={handleStackClick}
         
       />
+
+ <SelectSidebar services={sidebarData} headingSidebar={"WEB DEVELOPMENT SOLUTIONS"}  />
+
+
 <CallToAction
 title="FEELING LOST IN THE INTRICATE WORLD OF WEB DEVELOPMENT?"
     subtitle="Our expert excellence is at your service, providing personalized web development solutions tailored to your unique business needs."
@@ -323,8 +327,8 @@ title="FEELING LOST IN THE INTRICATE WORLD OF WEB DEVELOPMENT?"
      columns={2} 
  
  />   
-  <SelectSidebar services={sidebarData} headingSidebar={"WEB DEVELOPMENT SOLUTIONS"}  />   
-
+    
+</div>
     </>
   )
 }

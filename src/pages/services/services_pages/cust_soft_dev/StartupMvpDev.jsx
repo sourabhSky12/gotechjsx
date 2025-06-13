@@ -293,6 +293,7 @@ const methodologyData = [
 
   return (
    <>
+   <div className='px-2 sm:px-0'>
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={startupmvpData} />
     <GridBlueCard
@@ -345,6 +346,7 @@ const methodologyData = [
     whitecards={whitecardsData}
     columns={3}
     />
+    </div>
    </>
   )
 }

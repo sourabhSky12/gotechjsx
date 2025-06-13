@@ -11,9 +11,9 @@ const CrossPLatMobile = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Flutter", image: "/Flutter-1.png" },
+    { name: "React.JS", image: "/React-JS.png" },
+    
   ];
 
   return (

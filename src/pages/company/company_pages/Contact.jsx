@@ -16,10 +16,10 @@ const Contact = () => {
  };
   return (
    <>
-   
+   <div className='px-3 sm:px-0'>
    <StatsSection stats={stats} content={content}/>
    
-   
+   </div>
    </>
   )
 }

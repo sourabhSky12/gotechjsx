@@ -14,6 +14,7 @@ import FrontEnd from '../../../../components/techstack/FrontEnd'
 import BackEnd from '../../../../components/techstack/BackEnd'
 import MobileApp from '../../../../components/techstack/MobileApp'
 import UiUx from '../../../../components/techstack/UiUx'
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const StaffAug = () => {
   const [showModal, setShowModal] = useState(false);
      const stats = [
@@ -224,7 +225,7 @@ const methodData=[
 
 ];
 
-  const [stacklist, setstacklist] = useState([
+  const [stacklist] = useState([
     {
       title: "FRONT-END DEVELOPMENT",
       element: <FrontEnd />,
@@ -248,6 +249,75 @@ const methodData=[
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+      const sidebarData = [
+  {
+    title: 'SHORT-TERM STAFF AUGMENTATION',
+    content: {
+      paragraphs: [
+        `Augment your existing team with the talent of the Go InfoTech solution to foster the growth of your business in multiple folds.`,
+       
+      ],
+      sections:[{ heading: 'TAILORED FOR SCENARIOS SUCH AS:'}],
+      list: [
+        'Enhanced performance enables you to focus on core tasks',
+        'Managing escalated project workload during peak season',
+        'Augment with specialized expertise during critical project milestones.',
+        
+      ],
+    },
+     
+  },
+  {
+    title: 'LONG-TERM STAFF AUGMENTATION',
+    content: {
+      paragraphs: [
+        'Partner with us and equip your business with dedicated specialists who are here to fulfill the long-term needs of your business and provide enhanced operational efficiency.',
+      ],
+      sections:[{ heading: 'TAILORED FOR SCENARIOS SUCH AS:'}],
+      list: [
+        'Sustained upkeep and updates of intricate software solutions.',
+        'Development of long-scale projects with relevant talent and expertise',
+        'Managed IT services for advancing ventures',
+       
+      ],
+    },
+  },
+   {
+    title: 'EXPANDING YOUR EXISTING TEAM',
+    content: {
+      paragraphs: [
+        'Collaborate with us to elevate the knowledge and expertise of your existing team with our highly skilled professionals. We swiftly recognize the proficiency of our team and deploy it to enable the robust expansion of your business. ',
+      ],
+      sections:[{ heading: 'TAILORED FOR SCENARIOS SUCH AS:'}],
+      list: [
+        'Recruit more developers to keep up with the advancing projects',
+        'Customized project solutions for emerging projects and business plans',
+        'Equip your projects with talent that catalyzes the growth of your business',
+        
+        
+      ],
+    },
+  },
+   {
+    title: 'VENDOR TRANSITION',
+    content: {
+      paragraphs: [
+        'Transition seamlessly from one vendor to another with the assistance of Go InfoTech Solution. Swift transition without any hassle.',
+      ],
+      sections:[{ heading: 'TAILORED FOR SCENARIOS SUCH AS:'}],
+      list: [
+        'Smooth IT agency transition without any disruption',
+        'Managed IT services for optimizing the operations',
+        'Transition to a service-driven approach rather than a project-centric model',
+        
+      ],
+    },
+    
+  },
+ 
+  
+
+];
   return (
    <>
    
@@ -264,6 +334,17 @@ const methodData=[
   
   
   />
+
+   <SelectSidebar 
+                             services={sidebarData}
+                              headingSidebar={"OUR SERVICES"} 
+                               sectbgcolor="bg-[#314B8C]"
+                               headtextcolor= "text-white"
+                               dynamicontetext= "text-white"
+                                 textList = "text-[#f6ae39]"
+                                 selectedClass = 'bg-white text-[#314B8C] '
+                                 unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                              />  
 
 <IconTopCard
    servicesData={crossPlatData}

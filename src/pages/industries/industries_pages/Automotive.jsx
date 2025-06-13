@@ -13,6 +13,7 @@ import FrontEnd from '../../../components/techstack/FrontEnd'
 import BackEnd from '../../../components/techstack/BackEnd'
 import MobileApp from '../../../components/techstack/MobileApp'
 import UiUx from '../../../components/techstack/UiUx'
+import SelectSidebar from '../../../components/common/sidebarselect/SelectSidebar'
 const Automotive = () => {
   const [showModal, setShowModal] = useState(false);
    const stats = [
@@ -206,11 +207,112 @@ const methodologyData = [
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+    const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR AUTOMOTIVE IT PRODUCTS',
+    content: {
+      paragraphs: [
+        `Add the expertise of Go InfoTech Solution to your existing team, and make sure you augment it with highly specialized and experienced professionals from the most trusted Custom Software Development Company in Udaipur.`,
+      ],
+     
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'CAR RENTAL MANAGEMENT SOFTWARE SOLUTIONS',
+    content: {
+      paragraphs: [
+        'At Go InfoTech, we offer comprehensive software solutions for car rental services designed to revolutionize operations within the automotive industry.',
+      ],
+      sections:[{ heading: 'OFFERING FUNCTIONALITIES:'}],
+      list: [
+        'Scheduling and Booking administration',
+        'Automotive fleet administration',
+        'Pricing policies',
+       
+        
+      ],
+    },
+  },
+   {
+    title: 'VEHICLE DIAGNOSTIC SOFTWARE SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Incorporate meticulously planned, AI-driven risk assessment software solutions for vehicle diagnosis, which will include regular vehicle maintenance.',
+      ],
+      sections:[{ heading: ' FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Identify faults and issues ',
+        'Assessment of vehicle performance',
+        'Recommending maintenance actions',
+        
+        
+      ],
+    },
+  },
+   {
+    title: 'AUTONOMOUS CAR SOFTWARE DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Lead the way in innovation with state-of-the-art autonomous vehicle software.',
+      ],
+      sections:[{ heading: 'We are excellent at enabling the smooth integration of many autonomous features, such as:'}],
+      list: [
+        'Self-navigation;',
+        'Obstacle detection;',
+        'Automated parking.',
+        
+      ],
+    },
+  },
+   {
+    title: 'CONNECTIVITY AND TELEMATICS SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Responsive vehicle connectivity with telematics solutions.',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Implementation of real-time vehicle tracking',
+        'Remote diagnostics',
+        'Advanced navigation systems.',
+       
+      ],
+    },
+  },
+  {
+    title: 'FLEET MANAGEMENT SOFTWARE',
+    content: {
+      paragraphs: [
+        'We offer smooth fleet solutions for your customers with our fleet management software.',
+      ],
+     sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Deployment of live vehicle tracking',
+        'Scheduling and easy vehicle booking options',
+        'Enhanced routing technology',
+        
+      ],
+    },
+  },
+
+];
   return (
     <>
-    
+    <div className='px-3 sm:px-0'>
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
+
+     <SelectSidebar 
+                       services={sidebarData}
+                        headingSidebar={"PARTNER WITH GO INFOTECH TO DRIVE AUTOMOTIVE SUCCESS"} 
+                         sectbgcolor="bg-[#314B8C]"
+                         headtextcolor= "text-white"
+                         dynamicontetext= "text-white"
+                           textList = "text-[#f6ae39]"
+                           selectedClass = 'bg-white text-[#314B8C] '
+                           unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                        />  
 
     {/* TECH STACK */}
       <TechStackSection
@@ -247,7 +349,7 @@ const methodologyData = [
          cardhov='hover:bg-[#405EA9]'
   />
        
-    
+  </div>  
     
     </>
   )

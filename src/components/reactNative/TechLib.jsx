@@ -12,7 +12,15 @@ const TechLib = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
+    { name: "Axios", image: "/axios.png" },
+    { name: "Expo", image: "/expo-1.png" },
+    { name: "Firebase", image: "/firebase-3.png" },
+    { name: "GraphQL", image: "/graphql.png" },
+    { name: "JavaScript", image: "/javascript.png" },
+    { name: "Jest", image: "/jest-1.png" },
+    { name: "Redis", image: "/redis-logo3.png" },
+    { name: "Redux", image: "/redux.png" },
+    { name: "Type Script", image: "/typescript.png" },
     
   ];
   return (

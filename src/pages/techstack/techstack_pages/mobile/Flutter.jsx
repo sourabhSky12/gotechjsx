@@ -2,7 +2,7 @@ import React from 'react'
 import StatsSection from '../../../../components/common/StatsSection'
 import IconTopCard from '../../../../components/common/IconTopCard'
 import CardGridHovBase from '../../../../components/common/CardGridHovBase'
-
+import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
 const Flutter = () => {
     const stats = [
    { value: 20, label: "experienced Java specialists worldwide", suffix: "+" },
@@ -84,10 +84,107 @@ const cardData = [
     description: 'Seamlessly integrate Flutter into your existing application codebase, making it a versatile choice for both new projects and ongoing developments, ensuring compatibility and flexibility.',
   },
 ];
+   const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR FLUTTER PROJECTS',
+    content: {
+      paragraphs: [
+        `Augment your development squad with our proficient Flutter experts, amplifying your project’s prowess and expediting its fruition. `,
+       
+      ],
+      sections:[{ heading: 'WE CAN ASSIST WITH:'}],
+      list: [
+        'Deploying adept Flutter developers tailored to your project requisites.',
+        'Filling skill voids within your existing team framework.',
+        'Delivering adaptable and scalable staffing solutions.',
+       
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'CUSTOM FLUTTER APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Our forte lies in crafting bespoke, high-performance Flutter applications for iOS and Android platforms, ensuring a harmonized and effective user journey.',
+      ],
+      sections:[{ heading: 'WE CAN ASSIST WITH:'}],
+      list: [
+        'Creating cross-platform mobile apps that transcend device boundaries.',
+        'Guaranteeing fluid performance and uniformity across various devices.',
+        'Incorporating contemporary features customized to align with your business objectives.',
+       
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+   {
+    title: 'FLUTTER APP MIGRATION',
+    content: {
+      paragraphs: [
+        'We specialize in facilitating the smooth migration of your current mobile or web applications to Flutter, elevating them with enhanced performance and a consolidated codebase.',
+      ],
+      sections:[{ heading: 'WE CAN ASSIST WITH:'}],
+      list: [
+        'Effortlessly transitioning apps to Flutter from alternative platforms.',
+        'Preserving functionality and data integrity throughout the migration process.',
+        'Harnessing Flutter’s capabilities to optimize app performance and user experience.',
+        
+        
+      ],
+    },
+  },
+   {
+    title: 'FLUTTER MAINTENANCE AND SUPPORT',
+    content: {
+      paragraphs: [
+        'We provide extensive maintenance and support services for Flutter applications, guaranteeing their ongoing relevance, functionality, and efficiency.',
+      ],
+      sections:[{ heading: 'WE CAN ASSIST WITH:'}],
+      list: [
+        'Regularly conducting app updates and optimizations to keep your application up to date.',
+        'Offering prompt bug fixes and technical support to address any issues that may arise.',
+        'Ensuring your app remains adaptable to changing user requirements and advancements in technology.',
+        
+      ],
+    },
+    
+  },
+   {
+    title: 'MOBILE APP DESIGN SERVICES',
+    content: {
+      paragraphs: [
+        'Our mobile app design services are tailored to deliver captivating and visually appealing designs, guaranteeing an exceptional user experience.',
+      ],
+      sections:[{ heading: 'WHAT WE OFFER:'}],
+      list: [
+        'Formulating user-centric design strategies specifically crafted for mobile applications.',
+        'Creating interactive and intuitive interfaces that enhance user engagement.',
+        'Incorporating the latest design trends and cutting-edge technologies to ensure your app stands out.',
+       
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  
+
+];
   return (
     <>
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={icontopData}/>
+     <SelectSidebar 
+                               services={sidebarData}
+                                headingSidebar={"OUR FLUTTER DEVELOPMENT SERVICES"} 
+                                 sectbgcolor="bg-[#314B8C]"
+                                 headtextcolor= "text-white"
+                                 dynamicontetext= "text-white"
+                                   textList = "text-[#f6ae39]"
+                                   selectedClass = 'bg-white text-[#314B8C] '
+                                   unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                                />  
     <CardGridHovBase
    
    heading="ADVANTAGES OF FLUTTER DEVELOPMENT"

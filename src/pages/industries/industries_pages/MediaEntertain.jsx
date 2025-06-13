@@ -13,6 +13,7 @@ import FrontEnd from '../../../components/techstack/FrontEnd'
 import BackEnd from '../../../components/techstack/BackEnd'
 import UiUx from '../../../components/techstack/UiUx'
 import MobileApp from '../../../components/techstack/MobileApp'
+import SelectSidebar from '../../../components/common/sidebarselect/SelectSidebar'
 const MediaEntertain = () => {
   const [showModal, setShowModal] = useState(false);
  const stats = [
@@ -206,11 +207,118 @@ const methodologyData = [
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+    const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR MEDIA & ENTERTAINMENT IT PRODUCTS',
+    content: {
+      paragraphs: [
+        `Augment with expertise, and make sure you augment it with highly specialized and experienced professionals from the most trusted Custom Software Development Company in Udaipur.`,
+      ],
+      sections:[{ heading: 'WE OFFER FUNCTIONALITIES LIKE:'}],
+       list: [
+        'Online streaming platforms ',
+        'Predictive analysis and forecasting techniques ',
+        'Optimized marketing processes using effective tools',
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'LIVE STREAMING APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'At Go InfoTech, we offer comprehensive media and entertainment solutions, along with a live-streaming platform and much more.',
+      ],
+      sections:[{ heading: 'OFFERING FUNCTIONALITIES:'}],
+      list: [
+        'Instantaneous broadcasting',
+        'Collaborative tools',
+        'High-definition video',
+        'Fortified security features in live stream apps',
+        
+      ],
+    },
+  },
+   {
+    title: 'VIDEO ON DEMAND APP DEVELOPMENT',
+    content: {
+      paragraphs: [
+        'Incorporate meticulously planned, AI-driven software solutions for the media and entertainment industries, which include predictive analysis and user-generated data analysis.',
+      ],
+      sections:[{ heading: ' FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Customized content recommendations',
+        'Fluid streaming experience',
+        'Compatibility with various devices',
+        
+        
+      ],
+    },
+  },
+   {
+    title: 'MARKETING SOFTWARE DEVELOPMENT SERVICES',
+    content: {
+      paragraphs: [
+        'Develop marketing software services while utilizing innovation and cutting-edge technology for an enhanced user experience',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES OF OUR E-COMMERCE SOLUTIONS:'}],
+      list: [
+        'Social media analytics software',
+        'SEO/SEM analytics software',
+        'Data visualization software',
+        'Relationship management software',
+      ],
+    },
+  },
+   {
+    title: 'CONTENT MANAGEMENT SYSTEMS (CMS)',
+    content: {
+      paragraphs: [
+        'Personalize CMS solutions through effective content management.',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Content creation ',
+        'Content polishing',
+        'Content dissemination',
+        'Record keeping',
+      ],
+    },
+  },
+  {
+    title: 'INTERACTIVE MEDIA PLATFORMS',
+    content: {
+      paragraphs: [
+        'We offer seamless custom CRM solutions with our management software.',
+      ],
+     sections:[{ heading: 'FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Deeper customer analytics',
+        'Individualized marketing campaigns',
+        'Effective customer service administration',
+        
+      ],
+    },
+  },
+
+];
   return (
     <>
-    
+    <div className='px-3 sm:px-0' >
       <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
+
+      <SelectSidebar 
+                   services={sidebarData}
+                    headingSidebar={"PARTNER WITH GO INFOTECH FOR THE SUCCESS OF MEDIA & ENTERTAINMENT "} 
+                     sectbgcolor="bg-[#314B8C]"
+                     headtextcolor= "text-white"
+                     dynamicontetext= "text-white"
+                       textList = "text-[#f6ae39]"
+                       selectedClass = 'bg-white text-[#314B8C] '
+                       unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                    />  
 
     {/* TECH STACK */}
       <TechStackSection
@@ -247,7 +355,7 @@ const methodologyData = [
          cardhov='hover:bg-[#405EA9]'
   />
        
-    
+    </div>
     
     </>
   )

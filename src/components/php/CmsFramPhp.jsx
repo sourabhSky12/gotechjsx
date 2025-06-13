@@ -12,9 +12,9 @@ const CmsFramPhp = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Drupal", image: "/drupal-icon.png" },
+    { name: "Joomla", image: "/joomla.jpg" },
+    { name: "Wordpress", image: "/wordpress.png" }
   ];
 
   return (

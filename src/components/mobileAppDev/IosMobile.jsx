@@ -12,9 +12,9 @@ const IosMobile = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Healthkit", image: "/healthkit.png" },
+    { name: "RxSwift", image: "/rxjs-1.png" },
+    { name: "Swift", image: "/Swift-1.png" }
   ];
 
   return (

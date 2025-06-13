@@ -118,7 +118,7 @@ const [stacklist] = useState([
 
   return (
    <>
-   
+    <div className='px-3 sm:px-0' >
    <StatsSection stats={stats} content={content}/>
    <IconTopCard servicesData={angularData}/>
     <GridBlueBaseBord
@@ -136,16 +136,19 @@ const [stacklist] = useState([
       />
 
 
-
+<div className='bg-[#314B8C]'>
+    <div className='py-10'>
    <CallToAction
     title="ARE YOU SET TO EMBARK YOUR JOURNEY WITH ANGULAR?"
     subtitle="Let Go InfoTech’s professionals assist you in unleashing the power of Angular to build scalable and effective web applications."
     buttonText="REQUEST A CONSULTATION"
     onClick={() => setShowModal(true)}
-    
+    textColor="text-white"
    /> 
-   
+   </div>
    <ContactModal show={showModal} onClose={() => setShowModal(false)}/>
+    </div>
+    </div>
    </>
   )
 }

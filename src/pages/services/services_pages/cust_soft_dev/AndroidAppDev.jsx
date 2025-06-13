@@ -4,13 +4,17 @@ import IconTopCard from '../../../../components/common/IconTopCard'
 import GridBlueCard from '../../../../components/common/GridBlueCard'
 import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import { useState } from 'react'
+import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import BackAndroid from '../../../../components/android/BackAndroid'
 import CloudAndroid from '../../../../components/android/CloudAndroid'
 import MobileTechAnd from '../../../../components/android/mobileTechAnd'
 import TechStackSection from '../../../../components/common/TechStackSection'
 import SelectSidebar from '../../../../components/common/sidebarselect/SelectSidebar'
+import CardMethodologyBase from '../../../../components/common/CardMethodologyBase'
+import CallToAction from '../../../../components/common/CallToAction'
+import ContactModal from '../../../../components/common/ContactModal'
 const AndroidAppDev = () => {
-  
+    const [showModal, setShowModal] = useState(false);
  const stats = [
    { value: 30, label: "mobile development experts", suffix: "+" },
   { value: 8, label: "of expertise ", suffix: " years" },
@@ -184,7 +188,8 @@ const andAppvData=[
       paragraphs: [
         `We make sure to enhance your team’s proficiency with seasoned Android developers. We are dedicated to serving you with excellence while incorporating scalability, efficiency, and expertise that is custom-curated to your unique needs.`,
       ],
-      heading: '  WHY PARTNER WITH US:',
+      sections:[{heading: '  WHY PARTNER WITH US:'},],
+      
       list: [
         'Access to highly-skilled Android developers.',
         'Flexible models that align with your project’s scale & complexity.',
@@ -200,7 +205,9 @@ const andAppvData=[
       paragraphs: [
         'We offer exceptional services by designing high-quality Android Native Apps that are custom-curated by using your ideas as a base and making sure that they are responsive to the Android platform’s capabilities.',
       ],
+      sections:[{
       heading: 'REACH OUT TO US FOR:',
+      },],
       list: [
         'Seamless & Efficient Native Android apps;',
         'Harnessing Android-specific Features & functionalities ',
@@ -215,7 +222,9 @@ const andAppvData=[
       paragraphs: [
         'We specialize in developing hybrid apps that are integrated with native and web solutions that are crafted by making use of standard web technologies and enclosed within a native app shell.',
       ],
+      sections:[{
       heading: 'PARTNER WITH US FOR:',
+      },],
       list: [
         'Uniform Applications across various Platforms.',
         'Rapid development cycles utilizing a single codebase. ',
@@ -230,7 +239,9 @@ const andAppvData=[
       paragraphs: [
         'We stand as a prominent Web Development company in Udaipur, known for our exceptional delivery of quality mobile applications to entrepreneurs, startups, and businesses that are feature-rich and visually appealing.',
       ],
+      sections:[{
       heading: 'WORK WITH US FOR:',
+      },],
       list: [
         'User-Centric Designs that boost engagement.',
         'Engaging Wireframing and Prototyping.',
@@ -245,7 +256,9 @@ const andAppvData=[
       paragraphs: [
         'Our custom Android apps provide intelligent business solutions for clients across multiple industries. Go-Tech’s Android apps for smartphones, tablets, and Android TV help our partners carve out a niche using apps that are fully compatible with all devices and the latest Android operating systems and make a real impact in the online marketplace. ',
       ],
+      sections:[{
       heading: ' HARMONIZING THE USE OF ANDROID:',
+      },],
       list: [
         'Crafting adaptable Apps for different screens & resolutions',
         'Leveraging Android’s adaptability for diverse devices ',
@@ -261,7 +274,9 @@ const andAppvData=[
       paragraphs: [
        ' Harnessing the expertise of our team in responsive Android app development. We meticulously ensure that the app is optimized and feature-rich while conducting thorough audits and consultations with the client.',
       ],
+      sections:[{
       heading: ' PARTNER WITH US FOR:',
+      },],
       list: [
         'Technical issues & infrastructural flaws',
         'Comprehensive reports with actionable suggestions',
@@ -276,7 +291,9 @@ const andAppvData=[
       paragraphs: [
        ' We make sure to streamline your Android apps with external systems and data sources, elevated functionality, and user experience.',
       ],
+      sections:[{
       heading: '  JOIN HANDS WITH US FOR:',
+      },],
       list: [
         'Smooth integration of payment processors, analytics, and more',
         'Secure data exchange with third-party services. ',
@@ -286,15 +303,41 @@ const andAppvData=[
     },
   },
 ];
+const methodData=[
+   {
+    icon: <DollarSign size={20} />,
+    title: 'LAUNCHING ANEW',
+    description:
+      'Trusted partners for businesses that are stepping into the mobile world for the first time, especially startups, for a responsive, interactive, and feature-rich Android application tailored to the unique needs of your business.',
+  },
+  {
+    icon: <Lightbulb size={20} />,
+    title: 'MIGRATING FROM MVP TO NATIVE',
+    description:
+      'Organizations that initially incorporated a low code/no code MVP and are now migrating to a native product to enhance their ROI and offer an improved user experience.',
+  },
+  {
+    icon: <Lock size={20} />,
+    title: 'IN-HOUSE TEAM AUGMENTATION',
+    description:
+      'Companies are planning on expanding with Android experts within their existing teams. We integrate productivity and knowledge into your organizational operations.',
+  },
+   {
+    icon: <Lock size={20} />,
+    title: 'SIMULTANEOUS ANDROID AND IOS DEVELOPMENT',
+    description:
+      'Businesses that are aiming for expansion on the Android and iOS platforms simultaneously. We specialize in providing a unified mobile app experience to users of different devices by complementing the existing in-house teams.',
+  },
 
+];
   return (
     <>
-    
+    <div className='px-2 sm:px-0'>
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={startupmvpData}/>
 
 
-       <SelectSidebar services={sidebarData} headingSidebar={"WEB DEVELOPMENT SOLUTIONS"}  />   
+       <SelectSidebar services={sidebarData} headingSidebar={"OUR SERVICES"}  />   
 
 
 
@@ -327,8 +370,34 @@ const andAppvData=[
  
  />   
     
-
+  <CardMethodologyBase
+    heading="WHOM WE SERVE"
+        items={methodData}
+        borderColor='border-[#D0DCFA]'
+        bgColor="bg-[#FAFBFF]"
+        cardColor="bg-white"
+        textColor="text-[#314B8C]"
+        iconColor="bg-[#314B8C]"
+        columns ="grid-cols-1 sm:grid-cols-2"
+        cardhov="hover:bg-[#F3F6FE]"
+       
+    />
     
+
+  <div className='bg-[#314B8C]'>
+    <div className='py-10'>
+    <CallToAction
+     title="Go Infotech Solution — SOFTWARE DEVELOPMENT COMPANY, INFUSES YOUR BUSINESS WITH DYNAMIC MOBILITY."
+   
+    buttonText="CONTACT US"
+    onClick={() => setShowModal(true)}
+    textColor = "text-white"
+    />
+    </div>
+    <ContactModal show={showModal} onClose={() => setShowModal(false)} />
+  </div>
+</div>
+
     </>
   )
 }

@@ -10,7 +10,7 @@ const BluePart = () => {
   return (
     <>
 
-    <div  ref={ref} class="w-full mt-10 primebgcolor px-4 py-10 ">
+    <div  ref={ref} class="w-full mt-10 primebgcolor px-4 py-20 ">
   <div class="flex flex-col lg:flex-row gap-10 sm:px-40  ">
     
     

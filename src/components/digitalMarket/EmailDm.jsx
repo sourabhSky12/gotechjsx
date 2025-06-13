@@ -13,7 +13,7 @@ const EmailDm = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
+    { name: "Python", image: "/Python-1.png" },
    
   ];
 

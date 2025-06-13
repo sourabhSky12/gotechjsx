@@ -11,11 +11,11 @@ const UiUxWeb = () => {
   ];
 
   const technologies = [
-    { name: "Figma", image: "Figma-1.png" },
-    { name: "Adobe XD", image: "Adobe-XD-1.png" },
-    { name: "Sketch", image: "Sketch-1.png" },
-    { name: "InVision", image: "InVision-1.png" },
-    { name: "Zeplin", image: "Zeplin-1.png" }
+    { name: "Figma", image: "/Figma-1.png" },
+    { name: "Adobe XD", image: "/Adobe_XD-1.png" },
+    { name: "Sketch", image: "/Sketch-1.png" },
+    { name: "InVision", image: "/Invision-1.png" },
+    { name: "Zeplin", image: "/Zeplin-1.png" }
   ];
 
   return (

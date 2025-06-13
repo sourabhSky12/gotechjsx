@@ -11,15 +11,13 @@ const DeepLearnAiMl = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Caffe", image: "/caffe-1.png" },
+    { name: "MXNet", image: "/mxnet.png" },
+    { name: "OpenAI", image: "/OpenAI-1.png" },
+    { name: "PyTorch", image: "/PyTorch-2.png" },
+    { name: "TensorFlow", image: "/Tensorflow-2.png" },
+    { name: "Theano", image: "/theano.png" },
+   
   ];
 
   return (

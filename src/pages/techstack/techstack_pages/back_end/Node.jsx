@@ -112,7 +112,7 @@ const blueBaseData = [
   };
   return (
     <>
-    
+     <div className='px-3 sm:px-0' >
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
     <GridBlueBaseBord  headings="NODE SOFTWARE DEVELOPMENT SERVICES"
@@ -126,6 +126,7 @@ const blueBaseData = [
         onStackClick={handleStackClick}
         
       />
+      </div>
     </>
   )
 }

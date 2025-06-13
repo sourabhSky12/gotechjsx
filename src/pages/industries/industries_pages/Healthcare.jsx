@@ -13,6 +13,7 @@ import FrontEnd from '../../../components/techstack/FrontEnd'
 import BackEnd from '../../../components/techstack/BackEnd'
 import UiUx from '../../../components/techstack/UiUx'
 import MobileApp from '../../../components/techstack/MobileApp'
+import SelectSidebar from '../../../components/common/sidebarselect/SelectSidebar'
 const Healthcare = () => {
    const [showModal, setShowModal] = useState(false);
     const stats = [
@@ -206,11 +207,138 @@ const methodologyData = [
   const handleStackClick = (stackl) => {
     setSelectedStack(stackl.element);
   };
+   const sidebarData = [
+  {
+    title: 'STAFF AUGMENTATION FOR HEALTHCARE IT PRODUCTS',
+    content: {
+      paragraphs: [
+        `Add the expertise of Go InfoTech Solution to your existing team, and make sure you augment it with highly specialized and experienced healthcare professionals from the most trusted Custom Software Development Company in Udaipur.`,
+      ],
+      sections:[{ heading: 'OFFERING FUNCTIONALITIES:'}],
+       list: [
+        'Diagnostic tools making use of AI ',
+        'Equipment Health Monitoring (EHM) System and detectors',
+        'eHealth platforms.',
+        
+      ],
+    },
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+  },
+  {
+    title: 'MOBILE HEALTHCARE APPLICATIONS',
+    content: {
+      paragraphs: [
+        'Go InfoTech offers a mobile healthcare software solution that is a comprehensive solution designed to revolutionize operations within the healthcare industry.',
+      ],
+      sections:[{ heading: 'OFFERING FUNCTIONALITIES:'}],
+      list: [
+        'Scheduling doctor’s appointments and consultation sessions',
+        'Adherence to regulatory compliance.',
+        'Medicine Tracking',
+        
+      ],
+    },
+  },
+   {
+    title: 'HEALTHCARE AI SOFTWARE SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Unleash the potential of AI and cutting-edge technology in the healthcare industry.',
+      ],
+      sections:[{ heading: ' FUNCTIONALITIES OF OUR SOFTWARE SOLUTIONS:'}],
+      list: [
+        'Forecasting analysis',
+        'real-time surveillance and assistance',
+        'Diagnostic tools making use of AI ',
+        'Health platforms',
+        
+      ],
+    },
+  },
+   {
+    title: 'TELEHEALTH AND TELEMEDICINE',
+    content: {
+      paragraphs: [
+        'Develop telehealth solutions that are user-friendly, removing geographical barriers.',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES INCLUDE:'}],
+      list: [
+        'Virtual clinic platforms',
+        'Telemonitoring systems',
+        'Electronic prescribing systems ',
+        'Ease up the medicine ordering process',
+      ],
+    },
+  },
+   {
+    title: 'HEALTHCARE DATA ANALYTICS SOFTWARE',
+    content: {
+      paragraphs: [
+        'Enabling you to transform health with predictive analysis',
+      ],
+      sections:[{ heading: 'FUNCTIONALITIES INCLUDE:'}],
+      list: [
+        'Predictive analysis ',
+        'Remote health surveillance  ',
+        'Automated trading; ',
+        'Electronic patient record systems',
+      ],
+    },
+  },
+  {
+    title: 'HEALTH INFORMATION SECURITY AND COMPLIANCE',
+    content: {
+      paragraphs: [
+        'Strict adherence to healthcare compliance and Sensitive Data Protection (SDP).',
+      ],
+     sections:[{ heading: 'FUNCTIONALITIES INCLUDE:'}],
+      list: [
+        'Health information management systems',
+        'Data encryption and SDP',
+        'Seamless eHealth platforms',
+        
+      ],
+    },
+  },
+ {
+    title: 'IOT SOLUTIONS',
+    content: {
+      paragraphs: [
+        'Enhanced user experience with innovative incorporation of IOT technology',
+      ],
+      sections: [
+        {
+          heading: 'INCORPORATION OF IOT FUNCTIONALITIES LIKE:',
+          
+        },
+      ],
+      list: [
+        'Predictive analysis ',
+        'Remote health surveillance',
+        'Regular medication updates and pop-ups',
+        
+      ],
+    },
+  },
+];
   return (
     <>
-    
+    <div className='px-3 sm:px-0' >
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER FOR DIGITAL SOLUTIONS'/>
+
+    
+            <SelectSidebar 
+               services={sidebarData}
+                headingSidebar={"IT-ENABLED SERVICES FOR MODERN HEALTHCARE"} 
+                 sectbgcolor="bg-[#314B8C]"
+                 headtextcolor= "text-white"
+                 dynamicontetext= "text-white"
+                   textList = "text-[#f6ae39]"
+                   selectedClass = 'bg-white text-[#314B8C] '
+                   unselectedClass = 'bg-[#405EA9] text-white hover:bg-[#54595F]'
+                />  
+            
 
     {/* TECH STACK */}
       <TechStackSection
@@ -247,7 +375,7 @@ const methodologyData = [
          cardhov='hover:bg-[#405EA9]'
   />
     
-    
+    </div>
     
     </>
   )

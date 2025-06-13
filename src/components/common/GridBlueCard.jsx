@@ -46,7 +46,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const GridBlueCard = ({ title, subtitle, industries = [], columns = 3 }) => {
+const GridBlueCard = ({ title, subtitle, industries = [], columns = 3 , cta}) => {
   const navigate = useNavigate();
 
   // Check if exactly 7 items
@@ -56,6 +56,7 @@ const GridBlueCard = ({ title, subtitle, industries = [], columns = 3 }) => {
 
   return (
     <section className="bg-[#314B8C] text-white py-12 w-full">
+      {cta && <div className="mt-8">{cta}</div>}
       <div className="max-w-7xl mx-auto sm:px-10 sm:pt-5">
         {title && (
           <h2 className="text-2xl md:text-4xl font-bold sm:py-10 uppercase">

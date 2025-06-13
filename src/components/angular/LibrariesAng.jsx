@@ -11,15 +11,12 @@ const LibrariesAng = () => {
   ];
 
   const technologies = [
-    { name: ".NET", image: "NET-1.png" },
-    { name: "Go", image: "GOlang-1.png" },
-    { name: "Java", image: "Java-1.png" },
-    { name: "Scala", image: "Scala-1.png" },
-    { name: "Node JS", image: "NodeJS-1.png" },
-    { name: "PHP", image: "PHP-1.png" },
-    { name: "Python", image: "Python-1.png" },
-    { name: "Ruby", image: "Ruby-1.png" },
-    { name: "Rust", image: "Rust-1.png" },
+    { name: "Angular", image: "/angular-material-1.png" },
+    { name: "Flutter", image: "/Flutter-1.png" },
+    { name: "Ionic", image: "/Ionic-1.png" },
+    { name: "Kotlin", image: "/Kotlin-1.png" },
+    { name: "React JS", image: "/React-JS.png" },
+   
   ];
 
   return (

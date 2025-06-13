@@ -337,6 +337,7 @@ const sidebarbgData =[
 
   return (
    <>
+   <div className='px-2 sm:px-0'>
    <StatsSection stats={stats} content={content}/>
    <IconTopCard
    servicesData={mobileAppData}
@@ -393,7 +394,7 @@ const sidebarbgData =[
     />  
 
 
-
+</div>
    </>
   )
 }

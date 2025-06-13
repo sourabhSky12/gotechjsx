@@ -115,11 +115,12 @@ const SearchEngineOptimization = () => {
 
   return (
     <>
+    <div className='px-2 sm:px-0'>
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={crossPlatData}/>
     <BoxBaseBord headsection="INDUSTRIES WE SERVE" steps={roadmapData}/>
    
-    
+    </div>
     </>
   )
 }

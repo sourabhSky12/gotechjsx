@@ -121,8 +121,8 @@ const methodologyData = [
  
 ];
   const ImageIcon = ({ path, text }) => {
-    <img src={path} alt={text} />;
-  };
+  return <img src={path} alt={text} />;
+};
   const [serviceList] = useState([
     {
       icon: <img src='/Aug.svg'></img>,
@@ -135,18 +135,18 @@ const methodologyData = [
       element: <ItConsulting />,
     },
     {
-      icon: <img src='/ItConsul.svg'/>,
+      icon: <img src='/cus.svg'/>,
       title: "CUSTOM SOFTWARE DEVELOPMENT",
       element: <CustomSoftware />,
       
     },
     {
-       icon: <img src='/ItConsul.svg'/>,
+       icon: <img src='/intel.svg'/>,
       title: "INTELLIGENT AUTOMATION",
       element: <IntelAuto />,
     },
     {
-       icon: <img src='/ItConsul.svg'/>,
+       icon: <img src='/manage.svg'/>,
       title: "MANAGED IT SERVICES",
       element: <ManagedIt />,
     },
@@ -166,7 +166,7 @@ const methodologyData = [
 
   return (
    <>
-   
+   <div className='px-3 sm:px-0'>
    <StatsSection stats={stats} content={content}/>
    
    <div className='sm:px-40'>
@@ -185,7 +185,7 @@ const methodologyData = [
         textColor="text-white"
         iconColor="bg-white/10"
         cardhov="hover:bg-[#405EA9]"
-        columns = 'grid-cols-2 md:grid-cols-4'
+        columns = 'grid-cols-1 md:grid-cols-4'
         
   />
     <CardGridHovBase
@@ -236,7 +236,7 @@ const methodologyData = [
      columns={3} 
     
    />
-   
+   </div>
    </>
   )
 }

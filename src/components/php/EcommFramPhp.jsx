@@ -11,9 +11,9 @@ const EcommFramPhp = () => {
   ];
 
   const technologies = [
-    { name: "Angular", image: "Angular-icon.png" },
-    { name: "React.JS", image: "React-JS.png" },
-    { name: "Vue", image: "Vue.png" }
+    { name: "Magento", image: "/magento.png" },
+    { name: "PrestShop", image: "/prestashop.png" },
+    { name: "WooCommerce", image: "/WooCommerce_logo.png" }
   ];
 
   return (

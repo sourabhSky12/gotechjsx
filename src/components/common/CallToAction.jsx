@@ -1,15 +1,15 @@
-const CallToAction = ({ title, subtitle, buttonText, onClick }) => {
+const CallToAction = ({ title, subtitle, buttonText, onClick, textColor="text-blue-900" }) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between mt-10 px-6 md:px-20 lg:px-40">
-      <div className="md:w-1/2 text-center md:text-left mb-6 md:mb-0">
-        <h1 className="text-2xl md:text-3xl text-blue-900 font-semibold">{title}</h1>
-        <p className="text-base md:text-lg text-blue-900 mt-3">{subtitle}</p>
+      <div className={`md:w-1/2 text-center ${textColor} md:text-left mb-6 md:mb-0`} >
+        <h1 className="text-2xl md:text-3xl  font-semibold">{title}</h1>
+        <p className="text-base md:text-lg  mt-3">{subtitle}</p>
       </div>
 
       <div className="md:w-1/2 flex justify-center md:justify-end">
         <div
           onClick={onClick}
-          className="bg-[#ED8628] text-base md:text-lg text-white max-w-80   min-w-48 h-14 rounded-xl flex items-center justify-center gap-2 hover:bg-[#FFDBA1] cursor-pointer transition"
+          className="bg-[#ED8628] text-base md:text-lg text-white max-w-fit px-10   min-w-fit h-14 rounded-xl flex items-center justify-center gap-2 hover:bg-[#FFDBA1] cursor-pointer transition"
         >
           <span>{buttonText}</span>
           <svg

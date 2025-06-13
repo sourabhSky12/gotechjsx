@@ -183,6 +183,7 @@ const webdevDataBlue = [
 ];
   return (
     <>
+    <div className='px-3 sm:px-0' >
     <StatsSection stats={stats} content={content}/>
     
 <div className='sm:px-40'>
@@ -239,6 +240,7 @@ const webdevDataBlue = [
      columns={3} 
     
    />
+   </div>
     </>
   )
 }

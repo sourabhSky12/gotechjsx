@@ -118,7 +118,7 @@ const Php = () => {
   };
   return (
    <>
-   
+    <div className='px-3 sm:px-0' >
    <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
     <GridBlueBaseBord
@@ -133,7 +133,7 @@ const Php = () => {
         onStackClick={handleStackClick}
         
       />
-   
+   </div>
    </>
   )
 }

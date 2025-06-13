@@ -21,7 +21,7 @@ import Andriod from "./pages/techstack/techstack_pages/mobile/Andriod";
 import Flutter from "./pages/techstack/techstack_pages/mobile/Flutter";
 import Ios from "./pages/techstack/techstack_pages/mobile/Ios";
 import ReactNative from "./pages/techstack/techstack_pages/mobile/ReactNative";
-import AllServices from "./pages/services/AllServices";
+
 import Blogs from "./pages/company/company_pages/Blogs";
 import Contact from "./pages/company/company_pages/Contact";
 import ReferralProgram from "./pages/company/company_pages/ReferralProgram";
@@ -45,6 +45,7 @@ import CrossPlatformAppDev from "./pages/services/services_pages/cust_soft_dev/C
 import MobileAppDev from "./pages/services/services_pages/cust_soft_dev/MobileAppDev"
 import StartupMvpDev from "./pages/services/services_pages/cust_soft_dev/StartupMvpDev"
 import WebDev from "./pages/services/services_pages/cust_soft_dev/WebDev"
+import MachineLearn from "./pages/services/services_pages/intel_auto/MachineLearn";
 
 
 function App() {
@@ -80,7 +81,7 @@ function App() {
           <Route path="/techstack/flutter" element={<Flutter />} />
           <Route path="/techstack/ios" element={<Ios />} />
           <Route path="/techstack/reactnative" element={<ReactNative />} />
-          <Route path="/techstack/allservices" element={<AllServices />} />
+         
 
           <Route path="/company" element={<Company />} />
           <Route path="/company/blogs" element={<Blogs />} />
@@ -107,6 +108,7 @@ function App() {
           <Route path="/services/discoveryphase" element={<DiscoveryPhase/>} />
           <Route path="/services/clouddevopsserv" element={<CloudDevOpsServ/>} />
           <Route path="/services/staffag" element={<StaffAug/>} />
+          <Route path="/services/machinelearn" element={<MachineLearn/>} />
           
             
           
