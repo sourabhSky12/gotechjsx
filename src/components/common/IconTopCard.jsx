@@ -4,8 +4,8 @@ import React from 'react'
 
 const IconTopCard = ({ servicesData ,heading="WHY CHOOSE US", colum ="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}) => {
   return (
-    <div className='w-full'>   
-      <h2 className="text-2xl md:text-4xl font-bold sm:pt-5 mb-10 uppercase text-blue-900 lg:px-40">
+    <div className='w-full pt-15'>   
+      <h2 className="text-2xl md:text-4xl font-bold px-4 sm:pt-5 mb-10 uppercase text-blue-900 lg:px-40">
         {heading}
       </h2>
       <div className={`grid ${colum} gap-6 lg:px-40 pb-10`}>

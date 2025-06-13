@@ -278,7 +278,7 @@ const sidebarData = [
 
   return (
     <>
-    <div className='px-2 sm:px-0'>
+    
     <StatsSection stats={stats} content={content} />
     <IconTopCard servicesData={startupmvpData}/>
     <CardGridHovBase
@@ -328,7 +328,7 @@ title="FEELING LOST IN THE INTRICATE WORLD OF WEB DEVELOPMENT?"
  
  />   
     
-</div>
+
     </>
   )
 }

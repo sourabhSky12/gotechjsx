@@ -12,9 +12,10 @@ const [showModal, setShowModal] = useState(false);
 
   return (
     <>
-    <div ref={ref} className="px-4 py-10 bg-white md:px-12 lg:px-40">
+    <div ref={ref} className="px-4 py-8 bg-white md:px-12 lg:px-40">
+      <div className='text-xs text-center sm:text-start sm:pt-20 font-bold py-10'><span className='text-gray-600'>Go-Tech Solution | </span> <span className='text-[#314B8C] '>{content.heading}</span></div>
       <div className="max-w-7xl mx-auto text-center sm:text-start sm:flex">
-        <div className="sm:flex-1/2 sm:pr-10 sm:pt-40">
+        <div className="sm:flex-1/2 sm:pr-10 sm:pt-20">
           <h2 className="text-3xl md:text-4xl font-bold text-[#314B8C] mb-4">
             {content.heading}
           </h2>
@@ -44,7 +45,7 @@ const [showModal, setShowModal] = useState(false);
                   )}
                   {stat.suffix}
                 </div>
-                <p className="mt-2 text-sm pb-6 sm:pb-8">{stat.label}</p>
+                <p className="mt-2 text-base pb-6 sm:pb-8">{stat.label}</p>
               </div>
             ))}
           </div>

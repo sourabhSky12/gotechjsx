@@ -1,6 +1,6 @@
 const CallToAction = ({ title, subtitle, buttonText, onClick, textColor="text-blue-900" }) => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between mt-10 px-6 md:px-20 lg:px-40">
+    <div className="flex flex-col md:flex-row items-center justify-between mb-5 mt-10 px-6 md:px-20 lg:px-40">
       <div className={`md:w-1/2 text-center ${textColor} md:text-left mb-6 md:mb-0`} >
         <h1 className="text-2xl md:text-3xl  font-semibold">{title}</h1>
         <p className="text-base md:text-lg  mt-3">{subtitle}</p>

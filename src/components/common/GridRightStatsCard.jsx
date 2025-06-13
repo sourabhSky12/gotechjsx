@@ -27,7 +27,7 @@ const { ref, inView } = useInView({
 
   return (
    <>
-    <div className="sm:px-10 py-15 max-w-7xl mx-auto">
+    <div className="sm:px-10 py-15 max-w-7xl mx-auto px-2">
       <h2 className="text-3xl font-bold text-blue-900 pb-15">ABOUT GO-TECH SOLUTION</h2>
       <div className="flex flex-col sm:flex-row">
         

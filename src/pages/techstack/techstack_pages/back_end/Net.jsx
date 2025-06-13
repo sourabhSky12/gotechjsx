@@ -209,7 +209,7 @@ const Net = () => {
 ];
   return (
     <>
-     <div className='px-3 sm:px-0' >
+     
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
       <SelectSidebar 
@@ -233,8 +233,10 @@ const Net = () => {
     <WhiteBgCard
     whitecards={whitecardsData}
     columns={2}
+    heading="TECH INNOVATIONS FOR YOUR .NET PRODUCT"
+    subheading="Enhance the efficiency of your .NET product with cutting-edge technological advancements at Go InfoTech, ensuring it goes beyond mere functionality to become truly revolutionary. Stay ahead of the curve with our innovative solutions:"
     />
-    </div>
+   
     </>
   )
 }

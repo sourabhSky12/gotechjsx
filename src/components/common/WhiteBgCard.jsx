@@ -68,10 +68,10 @@ const WhiteBgCard = ({ title, whitecards = [], columns = 3 ,heading,subheading})
   return (
     <section className="bg-[#F8FAFC] py-12 w-full lg:px-40 text-[#314B8C]">
        <div className="text-center md:text-left pb-10">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 ">
+        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-900 px-2 ">
           {heading}
         </h1>
-        <p className="text-base md:text-lg text-blue-800 max-w-full mx-auto pt-4">
+        <p className="text-base md:text-lg text-blue-800 max-w-full mx-auto pt-4 px-2">
           {subheading}
         </p>
       </div>

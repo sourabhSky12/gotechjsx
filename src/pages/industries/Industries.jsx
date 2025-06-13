@@ -42,11 +42,11 @@ const companyData = [
 ]
   return (
     <>
-    <div className='px-3 sm:px-0'>
+   
     <StatsSection stats={stats} content={content}/>
     <SoftwareProvide/>
     <IconTopCard servicesData={companyData}/>
-    </div>
+   
     </>
   )
 }

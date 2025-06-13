@@ -3,7 +3,7 @@
  import IconTopCard from '../../components/common/IconTopCard'
  import CallToAction from '../../components/common/CallToAction'
 import LogoSlider from '../../components/common/LogoSlider';
-import { ImageIcon } from 'lucide-react';
+
 import { useState } from 'react';
 import FrontEnd from '../../components/techstack/FrontEnd';
 import BackEnd from '../../components/techstack/BackEnd';
@@ -17,6 +17,9 @@ import CustomSoftware from '../../components/ourServices/CustomSoftware';
 import IntelAuto from '../../components/ourServices/IntelAuto';
 import ManagedIt from '../../components/ourServices/ManagedIt';
 const Techstack = () => {
+   const ImageIcon = ({ path, text }) => {
+  return <img src={path} alt={text} />;
+};
   const [serviceList] = useState([
     {
       icon: <ImageIcon path={"/Aug.svg"} text={"AUGMENTATION"} />,
@@ -31,7 +34,7 @@ const Techstack = () => {
     {
       icon: (
         <ImageIcon
-          path={"/ItConsul.svg"}
+          path={"/cus.svg"}
           text={"custom software development"}
         />
       ),
@@ -40,12 +43,12 @@ const Techstack = () => {
       
     },
     {
-      icon: <ImageIcon path={"ItConsul.svg"} text={"Intelligent Automation"} />,
+      icon: <ImageIcon path={"/intel.svg"} text={"Intelligent Automation"} />,
       title: "INTELLIGENT AUTOMATION",
       element: <IntelAuto />,
     },
     {
-      icon: <ImageIcon path={"ItConsul.svg"} text={"Managed it services"} />,
+      icon: <ImageIcon path={"/manage.svg"} text={"Managed it services"} />,
       title: "MANAGED IT SERVICES",
       element: <ManagedIt />,
     },
@@ -177,17 +180,17 @@ const content = {
  
     <IconTopCard servicesData={techstackData}/>
 
-     <div className="pl-8 pr-0 py-10 sm:px-10 md:px-20 lg:px-40">
+     <div className=" py-10 sm:px-10 md:px-20 lg:px-40 px-4">
         {/* Header */}
-        <h1 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center sm:text-left">
+        <h1 className="text-blue-900 text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 text-center sm:text-left font-bold">
           OUR SERVICES
         </h1>
 
         {/* Service List + Selected Content */}
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row ">
           {/* Service List - Full width on small screens, column on large */}
           <div className="lg:basis-2/5 ">
-            <div className="w-screen -ml-4 sm:ml-0 sm:w-auto sm:pr-0 lg:pr-0 flex overflow-x-auto space-x-4 text-lg sm:text-xl text-center lg:flex-col lg:space-x-0 lg:space-y-4">
+            <div className="w-screen -ml-4 sm:ml-0 sm:w-auto  flex overflow-x-auto space-x-4 text-lg sm:text-xl text-center lg:flex-col lg:space-x-0 lg:space-y-4">
               {serviceList.map((item) => (
                 <ServiceItem
                   key={item.title}
@@ -202,7 +205,7 @@ const content = {
           </div>
 
           {/* Selected Service Content */}
-          <div className="mt-6 lg:mt-0 lg:ml-10 lg:basis-3/5">
+          <div className="mt-6 lg:mt-0 lg:ml-10 lg:basis-3/5  ">
             {selectedService}
           </div>
         </div>

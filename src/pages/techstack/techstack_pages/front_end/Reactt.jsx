@@ -167,7 +167,7 @@ const [stacklist] = useState([
 ];
   return (
    <>
-   <div className='px-3 sm:px-0' >
+   
    <StatsSection stats={stats} content={content}/>
    <IconTopCard servicesData={reactData}/>
      <SelectSidebar 
@@ -199,7 +199,7 @@ const [stacklist] = useState([
         onStackClick={handleStackClick}
         
       />
-</div>
+
    {/* 
    <GridBlueCard/>
     */}
