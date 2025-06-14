@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 gap-8">
         {/* Logo and Copyright */}
         <div>
-          <img className="w-20 h-20" src="Logo.webp" alt="go icon"/>
+          <img className="w-20 h-20" src="/Logo.webp" alt="go icon"/>
           {/* <h2 className="text-xl font-bold mb-2">GO TECH SOLUTION</h2> */}
           <p className="pt-3">© 2024 Go-tech Solution Inc. All Rights Reserved.</p>
         </div>
@@ -81,10 +81,10 @@ const Footer = () => {
             </li>
           </ul>
           <div className="flex space-x-4 mt-4">
-            <FaFacebookF className="hover:text-gray-300 cursor-pointer" />
-            <FaInstagram className="hover:text-gray-300 cursor-pointer" />
+          <Link to="https://www.facebook.com/GoTechSolution05">  <FaFacebookF className="hover:text-gray-300 cursor-pointer " /></Link>
+          <Link to="https://www.instagram.com/gotech_solution/"> <FaInstagram className="hover:text-gray-300 cursor-pointer" /> </Link> 
             <FaLinkedinIn className="hover:text-gray-300 cursor-pointer" />
-            <FaYoutube className="hover:text-gray-300 cursor-pointer" />
+           <Link to="https://www.youtube.com/@Gotechsolution">   <FaYoutube className="hover:text-gray-300 cursor-pointer" /></Link>
           </div>
         </div>
       </div>

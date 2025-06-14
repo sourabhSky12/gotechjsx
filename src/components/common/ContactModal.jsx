@@ -4,14 +4,14 @@ function ContactModal({ show, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
-      <div className="bg-white rounded-lg w-full max-w-7xl relative overflow-y-auto max-h-[95vh]">
+      <div className="bg-white rounded-lg w-full max-w-7xl relative overflow-y-auto max-h-[95vh] ">
         {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 p-2"
           aria-label="Close modal"
         >
-          <img src="xicon.png" alt="Close" className="w-4 h-4" />
+          <img src="/xicon.png" alt="Close" className="w-4 h-4" />
         </button>
 
         <div className="flex flex-col md:flex-row">
@@ -66,7 +66,7 @@ function ContactModal({ show, onClose }) {
             </p>
 
             <div className="flex gap-3 pt-6 items-center">
-              <img src="email.png" alt="Email" className="w-5 h-5" />
+              <img src="/email.png" alt="Email" className="w-5 h-5" />
               <a
                 href="mailto:career@go-techsolution.com"
                 className="text-[#ED8628] font-semibold hover:underline"
@@ -76,7 +76,7 @@ function ContactModal({ show, onClose }) {
             </div>
 
             <div className="flex gap-3 pt-4 items-center">
-              <img src="phone.png" alt="Phone" className="w-5 h-5" />
+              <img src="/phone.png" alt="Phone" className="w-5 h-5" />
               <a
                 href="tel:+918769365375"
                 className="text-[#ED8628] font-semibold hover:underline"
@@ -86,7 +86,7 @@ function ContactModal({ show, onClose }) {
             </div>
 
             <div className="flex gap-3 pt-4 items-start">
-              <img src="location.png" alt="Location" className="w-6 h-6 mt-1" />
+              <img src="/location.png" alt="Location" className="w-6 h-6 mt-1" />
               <div className="text-[#ED8628] font-semibold">
                 512-517, 5th floor, Amrit Shree, University Road,<br />
                 Udaipur, Rajasthan 313001

@@ -1,6 +1,7 @@
 import { Columns } from "lucide-react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 const servicesSubmenu = [
   {
@@ -92,37 +93,36 @@ const servicesSubmenu = [
 ];
 
 const industriesSubmenu = [
-   {
-    submenu:[
   {
-    label: "Fintech",
-    path: "/industries/fintech",
+    submenu: [
+      {
+        label: "Fintech",
+        path: "/industries/fintech",
+      },
+      {
+        label: "Healthcare",
+        path: "/industries/healthcare",
+      },
+      {
+        label: "Media & Entertainment",
+        path: "/industries/mediaentertain",
+      },
+      {
+        label: "Automotive",
+        path: "/industries/automotive",
+      },
+      {
+        label: "E-Commerce",
+        path: "/industries/ecomm",
+      },
+    ],
   },
-  {
-    label: "Healthcare",
-    path: "/industries/healthcare",
-  },
-  {
-    label: "Media & Entertainment",
-    path: "/industries/mediaentertain",
-  },
-  {
-    label: "Automotive",
-    path: "/industries/automotive",
-  },
-  {
-    label: "E-Commerce",
-    path: "/industries/ecomm",
-  },
-  ]
-  }
-
 ];
 
 const techstackSubmenu = [
   {
     label: "Front-end",
-    
+
     submenu: [
       {
         label: "Angular",
@@ -136,7 +136,7 @@ const techstackSubmenu = [
   },
   {
     label: "Back-end",
-    
+
     submenu: [
       {
         label: "Node",
@@ -162,7 +162,7 @@ const techstackSubmenu = [
   },
   {
     label: "Mobile",
-    
+
     submenu: [
       {
         label: "iOS",
@@ -185,25 +185,21 @@ const techstackSubmenu = [
 ];
 
 const companySubmenu = [
+  {
+    submenu: [
       {
-    submenu:[
-  {
-    label: "Referral Program",
-    path: "/company/referralprogram",
-  },
-  {
-    label: "Blogs",
-    path: "/company/blogs",
-  },
-  {
-    label: "Contact",
-    path: "/company/contact",
-  },
-  {
-    label: "About Us",
-    path: "/company/about",
-  },
-  ],
+        label: "Referral Program",
+        path: "/company/referralprogram",
+      },
+      {
+        label: "Blogs",
+        path: "/company/blogs",
+      },
+      {
+        label: "Contact",
+        path: "/company/contact",
+      },
+    ],
   },
 ];
 
@@ -276,32 +272,36 @@ const navItems = [
     path: "/services",
     submenu: servicesSubmenu,
     subInfo: <SerInfo />,
-    col:'columns-3',
-    headAll: <Link to="/services" >ALL SERVICES →</Link>,
+    col: "columns-3",
+    headAll: <Link to="/services">ALL SERVICES </Link>,
+    icon: <RiArrowDropDownLine size={28} />,
   },
   {
     label: "INDUSTRIES",
     path: "/industries",
     submenu: industriesSubmenu,
     subInfo: <IndInfo />,
-    col:'columns-2',
-    headAll: <Link to="/industries" >ALL INDUSTRIES →</Link>,
+    col: "columns-2",
+    headAll: <Link to="/industries">ALL INDUSTRIES </Link>,
+    icon: <RiArrowDropDownLine size={28} />,
   },
   {
     label: "TECH STACK",
     path: "/tech-stack",
     submenu: techstackSubmenu,
     subInfo: <TecInfo />,
-    col:'columns-3',
-    headAll: <Link to="/tech-stack" >ALL TECHNOLOGIES →</Link>,
+    col: "columns-3",
+    headAll: <Link to="/tech-stack">ALL TECHNOLOGIES </Link>,
+    icon: <RiArrowDropDownLine size={28} />,
   },
   {
     label: "COMPANY",
     path: "/company",
     submenu: companySubmenu,
     subInfo: <ComInfo />,
-    col:'columns-1',
-   
+    col: "columns-1",
+    headAll: <Link to="/company">ABOUT US </Link>,
+    icon: <RiArrowDropDownLine size={28} />,
   },
   { label: "PROJECTS", path: "/projects" },
 ];
@@ -318,7 +318,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-white text-[#405EA9] shadow-md w-full sticky top-0 z-50">
+    <header className="bg-[#FFFFFF] text-[#405EA9]  sticky top-0 z-50">
       <div className="max-w-7xl m-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between h-16">
         {/* Logo */}
 
@@ -399,67 +399,75 @@ export default function Navbar() {
                 </nav> */}
 
         <nav className="hidden  md:flex space-x-6  relative    items-center">
-          {navItems.map(({ label, path, submenu, subInfo, col ,headAll }) => (
-            <div key={label} className="group relative">
-              <Link to={path} className="transition-colors px-3 font-semibold">
-                {label}
-              </Link>
-
-              {submenu && (
-                <div className="absolute  left-50%  sm:flex sm:max-h-screen sm:w-fit bg-white text-[#405EA9] rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
-                  <div className="w-70 sm:max-h-screen flex items-center justify-center sm:min-h-60 bg-gray-50">
-                    {subInfo}
+          {navItems.map(
+            ({ label, path, submenu, subInfo, col, headAll, icon }) => (
+              <div key={label} className="group relative ">
+                <Link
+                  to={path}
+                  className="transition-colors px-3 font-semibold  "
+                >
+                  <div className="flex">
+                    <div>{label}</div>
+                    <div className="pb-1">{icon}</div>{" "}
                   </div>
-                  <div className="  py-6  px-10 text-start items-center content-center ">
-                    <ul className={` ${col} gap-6 bg-white  block items-center`}>
-                      {submenu.map((item) => (
-                        <li key={item.label} className="justify-center py-2 ">
-                          {item.path ? (
-                            <Link
-                              to={item.path}
-                              className="block   text-base font-semibold text-[#405EA9] "
-                            >
-                              {item.label}
-                            </Link>
-                          ) : (
-                            <span className="block   text-base font-semibold text-gray-500 cursor-default ">
-                              {item.label}
-                            </span>
-                          )}
+                </Link>
 
-                          {item.submenu && (
-                            <ul className="py-2">
-                              {item.submenu.map((subItem) => (
-                                <li key={subItem.label} className="py-2">
-                                  {subItem.path ? (
-                                    <Link
-                                      to={subItem.path}
-                                      className="block   text-sm text-[#405EA9] hover:text-amber-300 font-semibold"
-                                    >
-                                      {subItem.label}
-                                    </Link>
-                                  ) : (
-                                    <span className="block   text-sm text-gray-700 cursor-default">
-                                      {subItem.label}
-                                    </span>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                     {headAll && (
-              <div className="px-6 pb-4 text-lg text-center font-bold text-[#405EA9] hover:text-amber-300">
-                {headAll}
+                {submenu && (
+                  <div className="absolute  left-50%  sm:flex sm:max-h-screen  bg-white text-[#405EA9] rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-200 z-50">
+                    <div className="w-70 sm:max-h-screen flex items-center justify-center sm:min-h-60 bg-gray-50">
+                      {subInfo}
+                    </div>
+                    <div className=" py-4  px-5  text-start items-center content-center ">
+                      <ul className={` ${col}  bg-white  block items-center`}>
+                        {submenu.map((item) => (
+                          <li key={item.label} className="justify-center ">
+                            {item.path ? (
+                              <Link
+                                to={item.path}
+                                className="block   text-base font-semibold text-[#405EA9] "
+                              >
+                                {item.label}
+                              </Link>
+                            ) : (
+                              <span className="block   text-base font-semibold text-gray-500 cursor-default ">
+                                {item.label}
+                              </span>
+                            )}
+
+                            {item.submenu && (
+                              <ul className="py-2">
+                                {item.submenu.map((subItem) => (
+                                  <li key={subItem.label} className="py-2">
+                                    {subItem.path ? (
+                                      <Link
+                                        to={subItem.path}
+                                        className="block   text-sm text-[#405EA9] hover:text-amber-300 font-semibold"
+                                      >
+                                        {subItem.label}
+                                      </Link>
+                                    ) : (
+                                      <span className="block   text-sm text-gray-700 cursor-default">
+                                        {subItem.label}
+                                      </span>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                      {headAll && (
+                        <div className="px-6 py-8 text-lg text-center font-bold text-[#405EA9] hover:text-amber-300  whitespace-nowrap ">
+                          {headAll}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+            )
+          )}
         </nav>
 
         <div>
@@ -472,7 +480,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger Button */}
-        
+
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden focus:outline-none"
@@ -595,7 +603,7 @@ export default function Navbar() {
               onClick={() => setShowModal(false)}
               className="absolute top-2 right-2 text-gray-600 hover:text-gray-900 p-2"
             >
-              <img src="xicon.png" alt="xicon" />
+              <img src="/xicon.png" alt="/xicon" />
             </button>
             <div className="flex flex-col md:flex-row">
               <div className="md:w-3/5 p-6 md:p-8">
@@ -647,14 +655,14 @@ export default function Navbar() {
                 </p>
 
                 <div className="flex gap-4 pt-6 items-center">
-                  <img src="email.png" alt="email" className="w-5 h-5" />
+                  <img src="/email.png" alt="email" className="w-5 h-5" />
                   <div className="text-[#ED8628] font-semibold hover:underline cursor-pointer">
                     career@go-techsolution.com
                   </div>
                 </div>
 
                 <div className="flex gap-4 pt-4 items-center">
-                  <img src="phone.png" alt="phone" className="w-5 h-5" />
+                  <img src="/phone.png" alt="phone" className="w-5 h-5" />
                   <div className="text-[#ED8628] font-semibold hover:underline cursor-pointer">
                     +91-8769365375
                   </div>
@@ -662,7 +670,7 @@ export default function Navbar() {
 
                 <div className="flex gap-4 pt-4 items-start">
                   <img
-                    src="location.png"
+                    src="/location.png"
                     alt="location"
                     className="w-6 h-6 mt-1"
                   />

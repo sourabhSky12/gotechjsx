@@ -277,7 +277,7 @@ const methodologyData = [
 ];
   return (
     <>
-    <div className='px-2 sm:px-0'>
+    
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={crossPlatData} />
      <GridBlueBaseBord blueBaseData={blueBaseData} headings="ADVANTAGES OF CROSS-PLATFORM APP DEVELOPMENT"/>
@@ -314,7 +314,7 @@ const methodologyData = [
     
     />
     <ContactModal show={showModal} onClose={() => setShowModal(false)} />
-      </div>
+      
     </>
   )
 }

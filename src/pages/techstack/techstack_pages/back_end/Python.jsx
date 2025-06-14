@@ -6,6 +6,9 @@ import WhiteBgCard from '../../../../components/common/WhiteBgCard'
 import { DollarSign, Lightbulb, Lock } from 'lucide-react';
 import CardMethodologyBase from '../../../../components/common/CardMethodologyBase'
 import TechStackSection from '../../../../components/common/TechStackSection'
+import FramePython from '../../../../components/python/FramePython'
+import CloudProvPython from '../../../../components/python/CloudProvPython'
+import DataStoragePython from '../../../../components/python/DataStoragePython'
 const Python = () => {
     const stats = [
    { value: 20, label: "experienced Java specialists worldwide", suffix: "+" },
@@ -122,21 +125,18 @@ const methodologyData = [
 
   const [stacklist] = useState([
     {
-      title: "FRONT-END DEVELOPMENT",
-      element: <FrontEnd />,
+      title: "PYTHON FRAMEWORKS & LIBRARIES",
+      element: <FramePython />,
     },
     {
-      title: "BACK-END DEVELOPMENT",
-      element: <BackEnd />,
+      title: "CLOUD PROVIDERS",
+      element: <CloudProvPython />,
     },
     {
-      title: "MOBILE APP DEVELOPMENT",
-      element: <MobileApp />,
+      title: "DATABASES & STORAGE SOLUTIONS",
+      element: <DataStoragePython />,
     },
-    {
-      title: "UI/UX DESIGN",
-      element: <UiUx />,
-    },
+    
   ]);
 
   const [selectedStack, setSelectedStack] = useState(stacklist[0].element);

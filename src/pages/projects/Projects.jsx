@@ -1,5 +1,7 @@
 import React from 'react'
 import RightSideTextDesc from '../../components/common/RightSideTextDesc'
+import AnimatedCardGrid from '../../components/AnimatedCardGrid'
+
 
 const Projects = () => {
   return (
@@ -10,7 +12,7 @@ const Projects = () => {
     subheading="Empower your projects with Digis’ Angular expertise. Our dedicated team stands ready
      to transform your ideas into feature-rich, robust applications."
    />
-   
+  <AnimatedCardGrid/>
    </>
   )
 }

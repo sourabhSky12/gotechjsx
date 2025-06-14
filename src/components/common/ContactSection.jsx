@@ -2,7 +2,7 @@
 import React from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 const ContactSection = () => {
   return (
     <section className="bg-white px-6 py-12 md:px-40 mb-10">
@@ -27,17 +27,17 @@ const ContactSection = () => {
         {/* Contact Info */}
         <div className="w-full md:w-1/2 space-y-4">
         <h4 className="pb-10 text-blue-900 invisible sm:visible">Just fill out the form or contact us via email or phone:</h4>
-          <p className="flex items-center text-lg"><FaEnvelope className="mr-2" /> <a href="mailto:projects@go-techsolution.com">projects@go-techsolution.com</a></p>
-          <p className="flex items-center text-lg"><FaEnvelope className="mr-2" /> <a href="mailto:career@go-techsolution.com">career@go-techsolution.com</a></p>
-          <p className="flex items-center text-lg"><FaPhone className="mr-2" /> +91-8769365375</p>
-          <p className="flex items-center text-lg"><FaMapMarkerAlt className="mr-2" /> 515-517, 5th Floor, Amrit Shree, University Road, Udaipur, Rajasthan 313001</p>
+          <p className="flex items-center text-lg font-bold"><FaEnvelope className="mr-2 " /> <a href="mailto:projects@go-techsolution.com">projects@go-techsolution.com</a></p>
+          <p className="flex items-center text-lg font-bold"><FaEnvelope className="mr-2" /> <a href="mailto:career@go-techsolution.com">career@go-techsolution.com</a></p>
+          <p className="flex items-center text-lg font-bold"><FaPhone className="mr-2" /> +91-8769365375</p>
+          <p className="flex items-center text-lg font-bold"><FaMapMarkerAlt className="mr-2" /> 515-517, 5th Floor, Amrit Shree, University Road, Udaipur, Rajasthan 313001</p>
 
           {/* Social Icons */}
           <div className="flex space-x-4 mt-4 text-2xl">
-            <FaFacebook className="hover:text-blue-600 cursor-pointer" />
-            <FaInstagram className="hover:text-pink-500 cursor-pointer" />
+          <Link to="https://www.facebook.com/GoTechSolution05">  <FaFacebook className="hover:text-blue-600 cursor-pointer" /></Link>
+          <Link to="https://www.instagram.com/gotech_solution/">  <FaInstagram className="hover:text-pink-500 cursor-pointer" /></Link>
             <FaLinkedin className="hover:text-blue-700 cursor-pointer" />
-            <FaYoutube className="hover:text-red-600 cursor-pointer" />
+           <Link to="https://www.youtube.com/@Gotechsolution"> <FaYoutube className="hover:text-red-600 cursor-pointer" /> </Link>
           </div>
         </div>
       </div>
