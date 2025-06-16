@@ -191,7 +191,7 @@ const sidebarData = [
       ],
     
     },
-     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer">READ MORE</button>
+     button: <button className="bg-[orange] text-white px-10 py-3 rounded font-bold cursor-pointer " >READ MORE</button>
   },
   {
     title: 'CROSS-PLATFORM APP DEVELOPMENT',

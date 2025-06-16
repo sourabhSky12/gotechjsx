@@ -146,7 +146,7 @@ const methodologyData = [
   };
   return (
     <>
-    <div className='px-3 sm:px-0' >
+   
     <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={icontopData}/>
 
@@ -176,7 +176,7 @@ const methodologyData = [
         cardhov="hover:bg-[#405EA9]"
         headSub="While Python constitutes a cornerstone of our expertise, our development team boasts proficiency across a wide spectrum of contemporary technologies. This breadth of skills enhances our capacity to deliver diverse and comprehensive solutions, catering to various project requirements."
   />
-    </div>
+   
     </>
   )
 }

@@ -118,7 +118,7 @@ const [stacklist] = useState([
 
   return (
    <>
-    <div className='px-3 sm:px-0' >
+    
    <StatsSection stats={stats} content={content}/>
    <IconTopCard servicesData={angularData}/>
     <GridBlueBaseBord
@@ -148,7 +148,7 @@ const [stacklist] = useState([
    </div>
    <ContactModal show={showModal} onClose={() => setShowModal(false)}/>
     </div>
-    </div>
+   
    </>
   )
 }

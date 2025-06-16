@@ -8,20 +8,23 @@ import HrmDetails from "./projects/HrmDetails";
 import BillDetails from "./projects/BillDetails";
 import GoFinanceDetails from "./projects/GoFinanceDetails";
 import ScannerDetails from "./projects/ScannerDetails";
-
 // ✅ Data: Components passed as functions
 const cardData = [
-  { title: "CRM SOFTWARE", image: "/1.jpg", Component: CrmDetails },
-  { title: "HRM SOFTWARE", image: "/3.jpg", Component: HrmDetails },
-  { title: "BILLING SOFTWARE", image: "/5.jpg", Component: BillDetails },
-  { title: "GO FINANCE SOFTWARE", image: "/4.jpg", Component: GoFinanceDetails },
-  { title: "PHOTO SCANNER SOFTWARE", image: "/2.jpg", Component: ScannerDetails },
+  { title: "A Prestigious Software Development Company in Udaipur", image: "/Go-Teck-2048x1366.jpg", Component: CrmDetails },
+  { title: "The Evolution Of SEO: Trends And Strategies For 2024", image: "/evosol.jpg", Component: HrmDetails },
+  { title: "Optimize Your Website For Success In 2024 With This SEO Checklist", image: "/backlinks.jpg", Component: BillDetails },
+  { title: "How To Grow In Business By Using Software Development ?", image: "/businesdev.jpg", Component: GoFinanceDetails },
+  { title: "What Do You Understand About Local SEO & Its Benefits?", image: "/localseo.jpg", Component: ScannerDetails },
+  { title: "Trends Shaping The Future Of Software Development In Ahmedabad", image: "/ahemdabad.jpg", Component: ScannerDetails },
+  { title: "ReactJS Revolution: Why It’s The Preferred Choice For Web Development In 2023", image: "/reactjs.png", Component: ScannerDetails },
+  { title: "Top 5 Software Development Companies In Ahmedabad", image: "/top5.png", Component: ScannerDetails },
 ];
 
 // ✅ Card Component (stateless)
 const AnimatedCard = ({ title, image, onOpen }) => {
   return (
-    <div className="bg-white overflow-hidden  w-full">
+   <div className="bg-white overflow-hidden w-full">
+
       <motion.div
         whileHover={{ y: -15 }}
         transition={{ type: "spring", stiffness: 200, damping: 15 }}
@@ -31,16 +34,16 @@ const AnimatedCard = ({ title, image, onOpen }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover rounded-2xl shadow-md"
+          className="w-full h-auto object-contain rounded-2xl shadow-md"
         />
       </motion.div>
-      <div className="p-4 text-center text-[#314B8C]">
+      <div className="text-start pt-6 text-[#314B8C]">
         <h3 className="text-lg font-bold ">{title}</h3>
         <button
           onClick={onOpen}
-          className=" mt-2 font-semibold text-base"
+          className=" pt-6 font-bold  text-base"
         >
-          VIEW MORE  &gt;
+          VIEW MORE &gt;
         </button>
       </div>
     </div>
@@ -48,7 +51,7 @@ const AnimatedCard = ({ title, image, onOpen }) => {
 };
 
 // ✅ Main Grid with Modal Control
-const AnimatedCardGrid = () => {
+const BlogsCard = () => {
   const [showModal, setShowModal] = useState(false);
   const [SelectedComponent, setSelectedComponent] = useState(null);
 
@@ -65,8 +68,8 @@ const AnimatedCardGrid = () => {
   return (
     <>
       {/* Grid */}
-      <div className="w-full px-4 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-y-20 gap-y-10 w-full">
+      <div className="w-full px-4 lg:px-40">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-y-10 gap-y-10 w-full">
           {cardData.map((card, index) => (
             <AnimatedCard
               key={index}
@@ -99,4 +102,4 @@ const AnimatedCardGrid = () => {
   );
 };
 
-export default AnimatedCardGrid;
+export default BlogsCard;

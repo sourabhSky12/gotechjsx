@@ -22,7 +22,7 @@ const [showModal, setShowModal] = useState(false);
           <p className="text-lg text-[#405EA6] pb-8 max-w-2xl mx-auto">
             {content.subheading}
           </p>
-          <button className="bg-orange-500 text-white px-10 py-3 rounded-md font-semibold hover:bg-orange-600 transition sm:px-12 sm:py-4 " onClick={() => setShowModal(true)}>
+          <button className="bg-orange-500 text-white px-10 py-3 rounded-md font-semibold cursor-pointer hover:bg-orange-600 transition sm:px-12 sm:py-4 " onClick={() => setShowModal(true)}>
             GET INFO →
           </button>
         </div>

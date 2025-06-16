@@ -299,7 +299,7 @@ const methodologyData = [
 ];
   return (
     <>
-    <div className='px-3 sm:px-0'>
+    
      <StatsSection stats={stats} content={content}/>
     <IconTopCard servicesData={iconTopCardData} heading='WHY CHOOSE GO INFOTECH AS YOUR PARTNER'/>
 
@@ -349,7 +349,7 @@ const methodologyData = [
          cardhov='hover:bg-[#405EA9]'
   />
        
-  </div>  
+ 
     
     </>
   )

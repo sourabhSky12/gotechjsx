@@ -517,7 +517,7 @@ export default function Navbar() {
           {navItems.map(({ label, path, submenu }) => (
             <div key={label}>
               <div className="flex justify-between items-center py-2 border-b border-gray-700">
-                <a href={path} className="text-[#405EA9] font-semibold">
+                <a href={path} className="text-[#405EA9] font-bold">
                   {label}
                 </a>
                 {submenu && (
@@ -546,7 +546,7 @@ export default function Navbar() {
               </div>
 
               {submenu && openSubmenus[label] && (
-                <ul className="pl-4 text-sm text-[#405EA9] space-y-1">
+                <ul className="pl-4 text-sm text-[#405EA9] font-semibold space-y-1">
                   {submenu.map((item) => (
                     <li key={item.label}>
                       {item.path ? (
